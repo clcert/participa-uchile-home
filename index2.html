@@ -1,221 +1,304 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Participa UChile</title>
-  <link rel="stylesheet" type="text/css" href="static/css/booth.css">
-  <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
-  <script src="https://kit.fontawesome.com/9542c9df50.js" crossorigin="anonymous"></script>
-</head>
-<body class="has-navbar-fixed-top">
-
-  <div id="content">
-
-    <nav class="navbar is-fixed-top px-2" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
-          <img src="static/svg/logo.svg" width="324">
-        </a>
-
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-end">
-          <a class="navbar-item" href="#eleccion">
-            En Curso
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Participa UChile</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/booth.css" />
+    <link rel="shortcut icon" type="image/png" href="favicon.ico" />
+    <script
+      src="https://kit.fontawesome.com/9542c9df50.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="has-navbar-fixed-top">
+    <div id="content">
+      <nav
+        class="navbar is-fixed-top px-2"
+        role="navigation"
+        aria-label="main navigation"
+      >
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://bulma.io">
+            <img src="assets/svg/logo.svg" width="324" />
           </a>
 
-          <a class="navbar-item" href="#video">
-            ¿Cómo votar?
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
           </a>
-
-          <a class="navbar-item" href="#faq">
-            FAQ
-          </a>
-
-          <a class="navbar-item" href="#equipo">
-            Equipo
-          </a>
-
-          <a class="navbar-item" target="_blank" href="https://www.twitter.com/participaUChile">
-            <span class="icon">
-              <i class="fab fa-twitter"></i>
-            </span>
-          </a>
-
-          <a class="navbar-item" target="_blank" href="mailto:participa.uchile@clcert.cl">
-            <span class="icon">
-              <i class="far fa-envelope"></i>
-            </span>
-          </a>
-
         </div>
 
-      </div>
-    </nav>
-    <section class="section election-section" id="eleccion">
-      <div class="container">
-        <h1 class="title" id="election-current">
-          ELECCIÓN EN CURSO
-        </h1>
-        <div class="columns">
-          <div class="column is-two-thirds">
-            <div class="box election-box">
-              <p class="has-text-white election-info mb-2 mx-2">
-                <span class="has-text-weight-bold">INSTITUTO: </span>Instituto de Estudios Internacionales
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item" href="#eleccion"> En Curso </a>
+
+            <a class="navbar-item" href="#video"> ¿Cómo votar? </a>
+
+            <a class="navbar-item" href="#faq"> FAQ </a>
+
+            <a class="navbar-item" href="#equipo"> Equipo </a>
+
+            <a
+              class="navbar-item"
+              target="_blank"
+              href="https://www.twitter.com/participaUChile"
+            >
+              <span class="icon">
+                <i class="fab fa-twitter"></i>
+              </span>
+            </a>
+
+            <a
+              class="navbar-item"
+              target="_blank"
+              href="mailto:participa.uchile@clcert.cl"
+            >
+              <span class="icon">
+                <i class="far fa-envelope"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </nav>
+      <section class="section election-section" id="eleccion">
+        <div class="container">
+          <h1 class="title" id="election-current">ELECCIÓN EN CURSO</h1>
+          <div class="columns">
+            <div class="column is-two-thirds">
+              <div class="box election-box">
+                <p class="has-text-white election-info mb-2 mx-2">
+                  <span class="has-text-weight-bold">INSTITUTO: </span>Instituto
+                  de Estudios Internacionales
+                </p>
+                <p class="has-text-white election-info mb-2 mx-2">
+                  <span class="has-text-weight-bold">FECHA: </span>Miércoles 14
+                  de julio, de 09:00 a 17:00
+                </p>
+                <div class="has-text-white election-info mx-2 pt-3">
+                  <h1 class="title has-text-white is-size-4" id="buttons-title">
+                    INGRESA PARA VOTAR
+                  </h1>
+                  <a href="">
+                    <button class="button election-button">
+                      <span> REPR. ACADÉMICOS AL CONSEJO DEL INSTITUTO </span>
+                    </button>
+                  </a>
+                  <a href="">
+                    <button class="button election-button">
+                      <span>
+                        DIRECTOR/A RR.EE. Y JURÍDICAS INTERNACIONALES
+                      </span>
+                    </button>
+                  </a>
+                  <a href="">
+                    <button class="button election-button">
+                      <span> DIRECTOR/A RR.II. Y POLÍTICAS PÚBLICAS </span>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="column is-align-self-center is-hidden-touch">
+              <figure class="image">
+                <img id="drawing-election" src="assets/svg/dibujo_2.svg" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section video-section" id="video">
+        <div class="container">
+          <h1 class="title pt-6" id="election-current">
+            ¿CÓMO VOTAR UTILIZANDO PARTICIPA UCHILE?
+          </h1>
+          <h1 class="subtitle" id="election-current">
+            Revisa el vídeo a continuación para aprender a votar utilizando
+            Participa UChile
+          </h1>
+          <figure class="image is-16by9">
+            <iframe
+              class="has-ratio"
+              width="640"
+              height="360"
+              src="https://www.youtube.com/embed/YE7VzlLtp-4"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </figure>
+        </div>
+      </section>
+      <section class="section faq-section" id="faq">
+        <div class="container">
+          <h1 class="title pt-6" id="election-current">PREGUNTAS FRECUENTES</h1>
+          <article class="message">
+            <div class="message-header">
+              <p>1. ¿Cómo se autentican los usuarios?</p>
+            </div>
+            <div class="message-body">
+              En Participa UChile todos los votantes deben contar con una cuenta
+              UChile (cuenta Pasaporte), ya que es la única manera de
+              autenticarse en el sistema.
+            </div>
+          </article>
+          <article class="message">
+            <div class="message-header">
+              <p>
+                2. ¿En qué elecciones se utilizó/utilizará el sistema Participa
+                UChile?
               </p>
-              <p class="has-text-white election-info mb-2 mx-2">
-                <span class="has-text-weight-bold">FECHA: </span>Miércoles 14 de julio, de 09:00 a 17:00
-              </p>  
-              <div class="has-text-white election-info mx-2 pt-3">
-                <h1 class="title has-text-white is-size-4" id="buttons-title">
-                  INGRESA PARA VOTAR
-                </h1>
-                <a href="">
-                  <button class="button election-button">
-                    <span>
-                      REPR. ACADÉMICOS AL CONSEJO DEL INSTITUTO
-                    </span>
-                  </button>
-                </a>
-                <a href="">
-                  <button class="button election-button">
-                    <span>
-                      DIRECTOR/A RR.EE. Y JURÍDICAS INTERNACIONALES
-                    </span>
-                  </button>
-                </a>
-                <a href="">
-                  <button class="button election-button">
-                    <span>
-                      DIRECTOR/A RR.II. Y POLÍTICAS PÚBLICAS
-                    </span>
-                  </button>
-                </a>
+            </div>
+            <div class="message-body">
+              La votación electrónica remota es aún un problema no resuelto de
+              manera completa, por lo que Participa UChile solo debiera
+              utilizarse en elecciones que sean de bajo perfil, ya que para
+              elecciones de más alto perfil (elecciones a nivel nacional) las
+              amenazas son tales que ningún sistema de votación electrónica
+              remoto puede asegurar su correcto funcionamiento
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section team-section" id="equipo">
+        <div class="container">
+          <h1 class="title pt-6" id="election-current">EQUIPO DE TRABAJO</h1>
+          <div class="columns">
+            <div class="column">
+              <div class="box has-text-centered team-box">
+                <figure class="image">
+                  <img
+                    class="is-rounded team-image"
+                    src="assets/img/ahevia.jpg"
+                  />
+                </figure>
+                <p
+                  class="
+                    title
+                    is-size-5
+                    pt-4
+                    is-color-blue
+                    has-text-weight-bold
+                  "
+                >
+                  ALEJANDRO HEVIA
+                </p>
+                <p class="subtitle is-color-blue">Investigador Principal</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="box has-text-centered team-box">
+                <figure class="image">
+                  <img
+                    class="is-rounded team-image"
+                    src="assets/img/cgomez.jpg"
+                  />
+                </figure>
+                <p
+                  class="
+                    title
+                    is-size-5
+                    pt-4
+                    is-color-blue
+                    has-text-weight-bold
+                  "
+                >
+                  CAMILO GÓMEZ
+                </p>
+                <p class="subtitle is-color-blue">Coordinador General</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="box has-text-centered team-box">
+                <figure class="image">
+                  <img
+                    class="is-rounded team-image"
+                    src="assets/img/cgomez.jpg"
+                  />
+                </figure>
+                <p
+                  class="
+                    title
+                    is-size-5
+                    pt-4
+                    is-color-blue
+                    has-text-weight-bold
+                  "
+                >
+                  RICARDO PERALTA
+                </p>
+                <p class="subtitle is-color-blue">Ingeniero de Desarrollo</p>
               </div>
             </div>
           </div>
-          <div class="column is-align-self-center is-hidden-touch">
-            <figure class="image">
-              <img id="drawing-election" src="static/svg/dibujo_2.svg" />
-            </figure>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <section class="section video-section" id="video">
-      <div class="container">
-        <h1 class="title pt-6" id="election-current">
-          ¿CÓMO VOTAR UTILIZANDO PARTICIPA UCHILE?
-        </h1>
-        <h1 class="subtitle" id="election-current">
-          Revisa el vídeo a continuación para aprender a votar utilizando Participa UChile
-        </h1>
-        <figure class="image is-16by9">
-          <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/YE7VzlLtp-4" frameborder="0" allowfullscreen></iframe>
-        </figure>
-      </div>
-
-    </section>
-    <section class="section faq-section" id="faq">
-      <div class="container">
-        <h1 class="title pt-6" id="election-current">
-          PREGUNTAS FRECUENTES
-        </h1>
-        <article class="message">
-          <div class="message-header">
-            <p>1. ¿Cómo se autentican los usuarios?</p>
-          </div>
-          <div class="message-body">
-            En Participa UChile todos los votantes deben contar con una cuenta UChile (cuenta Pasaporte), ya que es la única manera de autenticarse en el sistema.
-          </div>
-        </article>
-        <article class="message">
-          <div class="message-header">
-            <p>2. ¿En qué elecciones se utilizó/utilizará el sistema Participa UChile?</p>
-          </div>
-          <div class="message-body">
-            La votación electrónica remota es aún un problema no resuelto de manera completa, por lo que Participa UChile solo debiera utilizarse en elecciones que sean de bajo perfil, ya que para elecciones de más alto perfil (elecciones a nivel nacional) las amenazas son tales que ningún sistema de votación electrónica remoto puede asegurar su correcto funcionamiento
-          </div>
-        </article>
-      </div>
-
-    </section>
-    <section class="section team-section" id="equipo">
-      <div class="container">
-        <h1 class="title pt-6" id="election-current">
-          EQUIPO DE TRABAJO
-        </h1>
-        <div class="columns">
-          <div class="column">
-            <div class="box has-text-centered team-box">
-              <figure class="image">
-                <img class="is-rounded team-image" src="static/img/ahevia.jpg">  
-              </figure>
-              <p class="title is-size-5 pt-4 is-color-blue has-text-weight-bold">ALEJANDRO HEVIA</p>
-              <p class="subtitle is-color-blue">Investigador Principal</p>
+          <div class="columns">
+            <div class="column is-one-third is-offset-2">
+              <div class="box has-text-centered team-box">
+                <figure class="image">
+                  <img
+                    class="is-rounded team-image"
+                    src="assets/img/cgomez.jpg"
+                  />
+                </figure>
+                <p
+                  class="
+                    title
+                    is-size-5
+                    pt-4
+                    is-color-blue
+                    has-text-weight-bold
+                  "
+                >
+                  CATALINA BURGOS
+                </p>
+                <p class="subtitle is-color-blue">Diseñadora Gráfica</p>
+              </div>
             </div>
-          </div>
-          <div class="column">
-            <div class="box has-text-centered team-box">
-              <figure class="image">
-                <img class="is-rounded team-image" src="static/img/cgomez.jpg">  
-              </figure>
-              <p class="title is-size-5 pt-4 is-color-blue has-text-weight-bold">CAMILO GÓMEZ</p>
-              <p class="subtitle is-color-blue">Coordinador General</p>
-            </div>
-          </div>
-          <div class="column">
-            <div class="box has-text-centered team-box">
-              <figure class="image">
-                <img class="is-rounded team-image" src="static/img/cgomez.jpg">  
-              </figure>
-              <p class="title is-size-5 pt-4 is-color-blue has-text-weight-bold">RICARDO PERALTA</p>
-              <p class="subtitle is-color-blue">Ingeniero de Desarrollo</p>
+            <div class="column is-one-third">
+              <div class="box has-text-centered team-box">
+                <figure class="image">
+                  <img
+                    class="is-rounded team-image"
+                    src="assets/img/cgomez.jpg"
+                  />
+                </figure>
+                <p
+                  class="
+                    title
+                    is-size-5
+                    pt-4
+                    is-color-blue
+                    has-text-weight-bold
+                  "
+                >
+                  EDUARDO RIVEROS
+                </p>
+                <p class="subtitle is-color-blue">
+                  Ingeniero de Seguridad e Infraestructura
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="columns">
-          <div class="column is-one-third is-offset-2">
-            <div class="box has-text-centered team-box">
-              <figure class="image">
-                <img class="is-rounded team-image" src="static/img/cgomez.jpg">  
-              </figure>
-              <p class="title is-size-5 pt-4 is-color-blue has-text-weight-bold">CATALINA BURGOS</p>
-              <p class="subtitle is-color-blue">Diseñadora Gráfica</p>
-            </div>
-          </div>
-          <div class="column is-one-third">
-            <div class="box has-text-centered team-box">
-              <figure class="image">
-                <img class="is-rounded team-image" src="static/img/cgomez.jpg">  
-              </figure>
-              <p class="title is-size-5 pt-4 is-color-blue has-text-weight-bold">EDUARDO RIVEROS</p>
-              <p class="subtitle is-color-blue">Ingeniero de Seguridad e Infraestructura</p>
-            </div>
-          </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container has-text-centered">
+          <p>
+            PARTICIPA.UCHILE es un proyecto de la Universidad de Chile - 2021
+          </p>
         </div>
-      </div>
+      </footer>
 
-    </section>
-
-    <footer class="footer">
-      <div class="container has-text-centered">
-        <p>PARTICIPA.UCHILE es un proyecto de la Universidad de Chile - 2021</p>
-      </div>
-    </footer>
-
-    <section class="hero">
-      <div class="hero-body bottom-hero">
-      </div>
-    </section>
-  </div>
-</body>
+      <section class="hero">
+        <div class="hero-body bottom-hero"></div>
+      </section>
+    </div>
+  </body>
 </html>
