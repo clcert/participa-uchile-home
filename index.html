@@ -14,70 +14,84 @@
 <body class="has-navbar-fixed-top">
   <div id="content">
     <script type="text/javascript">
-       $(document).ready(function() {
+     document.addEventListener('DOMContentLoaded', () => {
 
-                // Check for click events on the navbar burger icon
-                $(".navbar-burger").click(function() {
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
-                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                    $(".navbar-burger").toggleClass("is-active");
-                    $(".navbar-menu").toggleClass("is-active");
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
 
-                });
-            });
-    </script>
-    <nav
-    class="navbar is-fixed-top px-2"
-    role="navigation"
-    aria-label="main navigation"
-    >
-    <div class="navbar-brand">
-      <a class="navbar-item" href="https://participa.uchile.cl">
-        <img src="assets/svg/logo.svg" width="324" />
-      </a>
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
 
-      <a
-      role="button"
-      class="navbar-burger"
-      aria-label="menu"
-      aria-expanded="false"
-      data-target="navbarBasicExample"
-      >
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
 
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-end">
-      <a class="navbar-item" href="#eleccion"> En Curso </a>
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
 
-      <a class="navbar-item" href="#video"> ¿Cómo votar? </a>
+      });
+    });
+  }
 
-      <a class="navbar-item" href="#faq"> FAQ </a>
+});
+</script>
+<nav
+class="navbar is-fixed-top px-2"
+role="navigation"
+aria-label="main navigation"
+>
+<div class="navbar-brand">
+  <a class="navbar-item" href="https://participa.uchile.cl">
+    <img src="assets/svg/logo.svg" width="324" />
+  </a>
 
-      <a class="navbar-item" href="#equipo"> Equipo </a>
+  <a
+  role="button"
+  class="navbar-burger"
+  aria-label="menu"
+  aria-expanded="false"
+  data-target="navbarBasicExample"
+  >
+  <span aria-hidden="true"></span>
+  <span aria-hidden="true"></span>
+  <span aria-hidden="true"></span>
+</a>
+</div>
 
-      <a
-      class="navbar-item"
-      target="_blank"
-      href="https://www.twitter.com/participaUChile"
-      >
-      <span class="icon">
-        <i class="fab fa-twitter"></i>
-      </span>
-    </a>
+<div id="navbarBasicExample" class="navbar-menu">
+  <div class="navbar-end">
+    <a class="navbar-item" href="#eleccion"> En Curso </a>
+
+    <a class="navbar-item" href="#video"> ¿Cómo votar? </a>
+
+    <a class="navbar-item" href="#faq"> FAQ </a>
+
+    <a class="navbar-item" href="#equipo"> Equipo </a>
 
     <a
     class="navbar-item"
     target="_blank"
-    href="mailto:participa.uchile@clcert.cl"
+    href="https://www.twitter.com/participaUChile"
     >
     <span class="icon">
-      <i class="far fa-envelope"></i>
+      <i class="fab fa-twitter"></i>
     </span>
   </a>
+
+  <a
+  class="navbar-item"
+  target="_blank"
+  href="mailto:participa.uchile@clcert.cl"
+  >
+  <span class="icon">
+    <i class="far fa-envelope"></i>
+  </span>
+</a>
 </div>
 </div>
 </nav>
