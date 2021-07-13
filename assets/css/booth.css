@@ -195,6 +195,8 @@ div#preload {
   font-family: "Arial", sans-serif !important;
   font-weight: bold;
   border-color: #004c94 !important;
+  white-space: normal !important;
+  height: auto !important;
 }
 
 #buttons-title {
@@ -235,6 +237,10 @@ div#preload {
 
 .message-header {
   background-color: #004c94 !important;
+}
+
+#election-status {
+  color: red;
 }
 
 /* Progress Bar */
