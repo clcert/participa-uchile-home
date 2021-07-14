@@ -240,7 +240,7 @@ div#preload {
 }
 
 #election-status {
-  color: #4FFFB0;
+  color: red;
 }
 
 /* Progress Bar */
