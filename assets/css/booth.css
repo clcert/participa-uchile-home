@@ -186,8 +186,6 @@ div#preload {
 }
 
 .election-button {
-  margin-left: auto;
-  margin-right: auto;
   display: flex !important;
   align-self: center;
   margin-top: 0.5rem;
@@ -200,7 +198,6 @@ div#preload {
 }
 
 #buttons-title {
-  text-align: center;
 }
 
 #drawing-election {
@@ -241,6 +238,7 @@ div#preload {
 
 #election-status {
   color: red;
+  text-align: center;
 }
 
 /* Progress Bar */
