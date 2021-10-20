@@ -187,6 +187,8 @@ div#preload {
 
 .election-button {
   display: flex !important;
+  margin-left: auto;
+  margin-right: auto;
   align-self: center;
   margin-top: 0.5rem;
   color: #004c94 !important;
@@ -198,6 +200,7 @@ div#preload {
 }
 
 #buttons-title {
+  text-align: center;
 }
 
 #drawing-election {
