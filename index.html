@@ -188,6 +188,14 @@
        Cada votante, al concluir la selección de sus preferencias y enviar la papeleta con su voto encriptado, recibe un código serial identificador de la papeleta. Este código no revela su voto ni permite revelarlo a un tercero, pero sí permite identificar la papeleta encriptada dentro de la lista de papeletas encriptadas recibidas por el servidor. 
      </div>
    </article>
+   <article class="message">
+      <div class="message-header">
+        <p>6. ¡El sistema permite votar más de una vez! ¿Es un error o falla?</p>
+      </div>
+      <div class="message-body">
+       El sistema permite que, cualquier votante, luego de haber votado pueda ingresar nuevamente y reiniciar el proceso de votación, emitiendo un nuevo voto que reemplaza al voto anterior. El sistema nunca almacena más de un voto por votante. Si bien para un votante puede parecer que emite un "segundo voto", eso no es efectivo, pues efectivamente está reemplazando su voto. En particular, no puede darse el caso que un mismo votante tenga dos votos o más, siempre tendrá a lo más un voto. Esta funcionalidad es intencional y, si bien no existe en un sistema de votación de “lápiz y papel”, es posible de implementar de forma segura en un sistema electrónico. Es una medida estándar de mitigación parcial contra el problema de la coerción. Si bien no es perfecta, es simple de implementar y en entornos de baja coerción se considera razonablemente efectiva. Para la tranquilidad de todas y todos, podemos aclarar que no es una característica errónea o en necesidad de arreglo, pues no viola la unicidad del voto.
+     </div>
+   </article>
  </div>
 </section>
 <section class="section team-section" id="equipo">
