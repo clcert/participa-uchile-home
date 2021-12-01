@@ -72,6 +72,16 @@ div#preload {
   max-height: 6rem;
 }
 
+.navbar-div {
+  width: 100%;
+  background-color: white;
+}
+
+.custom-navbar {
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
+}
+
 #navbar {
   background-color: transparent;
 }
@@ -98,10 +108,14 @@ div#preload {
   border: none;
   margin-right: 0.8rem;
   padding-left: 0;
-  width: 4rem;
   text-align: left;
   cursor: pointer;
   padding-bottom: 0.2rem;
+  color: black !important;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
 }
 
 .menu-text {
@@ -113,7 +127,7 @@ div#preload {
   border-bottom: 2px solid #004c94;
 }
 
-#inicio:hover {
+#navbar-button-1:hover {
   color: #004c94 !important;
   font-weight: bold;
 }
@@ -122,7 +136,7 @@ div#preload {
   border-bottom: 2px solid #e43427;
 }
 
-#info:hover {
+#navbar-button-2:hover {
   color: #e43427 !important;
   font-weight: bold;
 }
@@ -131,7 +145,7 @@ div#preload {
   border-bottom: 2px solid #027d47;
 }
 
-#ayuda:hover {
+#navbar-button-3:hover {
   color: #027d47 !important;
   font-weight: bold;
 }
@@ -140,7 +154,7 @@ div#preload {
   border-bottom: 2px solid #fdd245;
 }
 
-#salir:hover {
+#navbar-button-4:hover {
   color: #fdd245 !important;
   font-weight: bold;
 }
@@ -165,14 +179,46 @@ div#preload {
   background-color: white;
 }
 
+.top-section {
+  background-color: white;
+  padding-bottom: 0 !important;
+  padding-top: 6rem;
+}
+
+.text-title {
+  font-family: "Arial Black", sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #004c94;
+  text-align: right;
+}
+
+.big-text-title {
+  font-family: "Arial Black", sans-serif;
+  font-weight: bold;
+  font-size: 2.4rem;
+}
+
 .election-section {
   background-color: rgba(255, 255, 255, 0.75);
-  padding-top: 6rem !important;
-  padding-bottom: 6rem !important;
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
 }
 
 .election-box {
-  background-color: #004990 !important;
+  background-color: white !important;
+  border: 1px solid #004990 !important;
+  border-radius: 6px;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: fit-content;
+}
+
+.election-box-info {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
 }
 
 .election-box-2 {
@@ -180,8 +226,6 @@ div#preload {
 }
 
 .election-info {
-  border: 1px solid white;
-  border-radius: 5px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 1rem;
@@ -189,18 +233,66 @@ div#preload {
   font-size: 1.2rem;
 }
 
+.current-election-title {
+ font-size: 1.5rem; 
+ font-family: "Arial Black", sans-serif;
+ color: #004c94;
+ border-bottom: 2px solid #004c94;
+}
+
+.current-election-item {
+  font-size: 1.3rem;
+}
+
 .election-button {
   display: flex !important;
   margin-left: auto;
   margin-right: auto;
   align-self: center;
-  margin-top: 0.5rem;
-  color: #004c94 !important;
+  color: ##e43427 !important;
   font-family: "Arial", sans-serif !important;
   font-weight: bold;
-  border-color: #004c94 !important;
+  border-color: #e43427 !important;
   white-space: normal !important;
   height: auto !important;
+  background-color: #e43427 !important;
+}
+
+.past-section {
+  background-color: rgba(0, 76, 148, 0.75);
+}
+
+.past-election {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.bullet-1 {
+  color: #004c94 !important;
+  font-weight: bold;
+}
+
+.bullet-2 {
+  color: #e43427 !important;
+  font-weight: bold;
+}
+
+.bullet-3 {
+  color: #027d47 !important;
+  font-weight: bold;
+}
+
+.bullet-4 {
+  color: #fdd245 !important;
+  font-weight: bold;
+}
+
+.bottom-hero {
+  background-color: white;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
 }
 
 #buttons-title {
@@ -213,6 +305,12 @@ div#preload {
   margin-right: auto;
 }
 
+#manito {
+  position: absolute;
+  top: 150px;
+  left: 150px;
+}
+
 .video-section {
   background-color: #d9e4ef;
 }
@@ -222,7 +320,7 @@ div#preload {
 }
 
 .team-section {
-  background-color: #d9e4ef;
+  background-color: white;
 }
 
 .team-box {
@@ -244,7 +342,7 @@ div#preload {
 }
 
 #election-status-1 {
-  color: #00b6ff;
+  color: #e43427;
   text-align: center;
 }
 

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   viewBox="0 0 306.78748 193.81946"
+   viewBox="0 0 296.78748 184.81946"
    version="1.1"
    id="svg69"
    sodipodi:docname="dibujo_1.svg"
-   width="306.78748"
-   height="193.81947"
-   inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
+   width="296.78748"
+   height="184.81947"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,21 +23,21 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="false"
-     width="305.75px"
+     width="306.78748px"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:zoom="2.4451688"
-     inkscape:cx="151.93225"
+     inkscape:cx="152.13674"
      inkscape:cy="129.02995"
      inkscape:window-width="1920"
-     inkscape:window-height="1003"
+     inkscape:window-height="1007"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg69"
-     height="150px" />
+     inkscape:current-layer="Esquema"
+     height="220.81947px" />
   <defs
      id="defs7">
     <style
@@ -62,7 +62,8 @@
       <g
          class="cls-2"
          clip-path="url(#clip-path)"
-         id="g65">
+         id="g65"
+         transform="translate(-9.6269,0.28046776)">
         <path
            class="cls-3"
            d="m 297.18,181.57 -13.44,-50.08 c 0,0 5.46,-18.71 4.61,-23 -0.85,-4.29 -6,-3.41 -6,-3.41 l -12.83,-6.43 -10.29,12.95 c 0,0 -5.18,-5.28 -8.8,-4.27 -3.62,1.01 -2.22,7.76 4.14,14.52 6.36,6.76 8.34,25.89 8.34,25.89 l 19.7,31.1 z"
