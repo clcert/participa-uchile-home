@@ -215,6 +215,18 @@ div#preload {
   max-width: fit-content;
 }
 
+.past-elections-box {
+  background-color: white !important;
+  border: 1px solid #004990 !important;
+  border-radius: 6px;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+  overflow: auto;
+  max-height: 500px;
+}
+
 .election-box-info {
   margin-left: auto;
   margin-right: auto;
