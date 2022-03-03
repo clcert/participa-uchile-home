@@ -28,7 +28,7 @@
   <!-- End Matomo Code -->
 </head>
 <body class="has-navbar">
-  <div id="content">
+  <div id="">
     <div class="navbar-div">
       <div class="container">
         <nav class="navbar custom-navbar pt-2 pl-0" role="navigation" aria-label="main navigation">
@@ -46,32 +46,60 @@
 
           <div id="navbarBasicExample" class="navbar-menu ml-6">
             <div class="navbar-end">
-              <a class="navbar-button navbar-item" id="navbar-button-1" href="#eleccion"> En Curso </a>
-
+                <ul class="nav__list">
+                  <li class="nav__item">
+                      <a href="#eleccion" title="" class="nav__link">EN CURSO</a>
+                  </li>
+                  <li class="nav__item">
+                      <a href="#realizadas" title="" class="nav__link">REALIZADAS</a>
+                  </li>
+                  <li class="nav__item">
+                      <a href="#video" title="" class="nav__link">COMO VOTAR</a>
+                  </li>
+                  <li class="nav__item">
+                      <a href="#faq" title="" class="nav__link">FAQ</a>
+                  </li>
+                  <li class="nav__item">
+                      <a href="#equipo" title="" class="nav__link">EQUIPO</a>
+                  </li>
+                  <li class="nav__item pr-0">
+                      <a target="_blank" href="https://www.twitter.com/participaUChile" title="" class="nav__social">
+                        <span class="icon">
+                          <i class="fab fa-twitter"></i>
+                        </span>
+                      </a>
+                  </li>
+                  <li class="nav__item pr-0">
+                      <a target="_blank" href="mailto:participa@uchile.cl" title="" class="nav__social">
+                        <span class="icon">
+                          <i class="far fa-envelope"></i>
+                        </span>
+                      </a>
+                  </li>
+                </ul>
+              
+              <!-- <a class="navbar-button navbar-item" id="navbar-button-1" href="#eleccion"> En Curso </a>
               <a class="navbar-button navbar-item" id="navbar-button-2" href="#realizadas"> Realizadas </a>
-
               <a class="navbar-button navbar-item" id="navbar-button-3" href="#video"> ¿Cómo votar? </a>
-
               <a class="navbar-button navbar-item" id="navbar-button-4" href="#faq"> FAQ </a>
-
               <a class="navbar-button navbar-item" id="navbar-button-1" href="#equipo"> Equipo </a>
-
               <a class="navbar-item" target="_blank" href="https://www.twitter.com/participaUChile">
                 <span class="icon">
                   <i class="fab fa-twitter"></i>
                 </span>
               </a>
-
               <a class="navbar-item" target="_blank" href="mailto:participa@uchile.cl">
                 <span class="icon">
                   <i class="far fa-envelope"></i>
                 </span>
-              </a>
+              </a> -->
+
             </div>
           </div>
         </nav>
       </div>
     </div>
+
     <section class="section top-section pt-3 is-hidden-touch">
       <div class="container">
         <div class="columns">
@@ -81,7 +109,8 @@
           <div class="column is-align-self-center">
             <p class="has-text-weight-bold text-title">
               <span class="big-text-title">BIENVENIDO</span>
-              <br/>AL SISTEMA DE VOTACIÓN</p>
+              <br/>AL SISTEMA DE
+              <br/>VOTACIÓN Y CONSULTAS</p>
             </div>
             <div class="column is-align-self-center">
 
@@ -99,7 +128,7 @@
 
           </div>  
         </section>
-
+        <div id="first-background">
         <section class="section election-section" id="eleccion">
           <div class="container">
             <div class="columns">
@@ -142,31 +171,32 @@
   </div>
 </section>
 
-<section class="section past-section">
+<section class="section past-section" id="realizadas">
   <div class="container">
     <div class="past-elections-box pb-2">
 
       <p class="election-info mb-2 mx-2">
         <span class="has-text-weight-bold current-election-title">ELECCIONES REALIZADAS</span>
       </p>
-      <p class="past-election">14-12-2021 <span class="bullet-2">⦿</span> Facultad de Ciencias Físicas y Matemáticas</p>
-      <p class="past-election">03-12-2021 <span class="bullet-1">⦿</span> Facultad de Economía y Negocios</p>
-      <p class="past-election">17-11-2021 <span class="bullet-4">⦿</span> Instituto de Estudios Internacionales</p>
-      <p class="past-election">11-11-2021 <span class="bullet-3">⦿</span> Asociación de Funcionarios Servicios Centrales</p>
-      <p class="past-election">09-11-2021 <span class="bullet-2">⦿</span> Facultad de Ciencias Químicas y Farmacéuticas</p>
-      <p class="past-election">09-11-2021 <span class="bullet-1">⦿</span> Facultad de Ciencias</p>
-      <p class="past-election">02-11-2021 <span class="bullet-4">⦿</span> Facultad de Arquitectura y Urbanismo</p>
-      <p class="past-election">20-10-2021 <span class="bullet-3">⦿</span> Instituto de Estudios Avanzados en Educación</p>
-      <p class="past-election">05-10-2021 <span class="bullet-2">⦿</span> Facultad de Ciencias Veterinarias y Pecuarias</p>
-      <p class="past-election">27-09-2021 <span class="bullet-1">⦿</span> Instituto de Asuntos Públicos</p>
-      <p class="past-election">27-08-2021 <span class="bullet-4">⦿</span> Facultad de Economía y Negocios</p>
-      <p class="past-election">25-08-2021 <span class="bullet-3">⦿</span> Facultad de Ciencias Físicas y Matemáticas</p>
-      <p class="past-election">26-07-2021 <span class="bullet-2">⦿</span> Facultad de Ciencias Sociales</p>
-      <p class="past-election">14-07-2021 <span class="bullet-1">⦿</span> Instituto de Estudios Internacionales</p>
+      <p class="past-election">14-12-2021 <span class="bullet-1">●</span> Facultad de Ciencias Físicas y Matemáticas</p>
+      <p class="past-election">03-12-2021 <span class="bullet-2">●</span> Facultad de Economía y Negocios</p>
+      <p class="past-election">17-11-2021 <span class="bullet-1">●</span> Instituto de Estudios Internacionales</p>
+      <p class="past-election">11-11-2021 <span class="bullet-2">●</span> Asociación de Funcionarios Servicios Centrales</p>
+      <p class="past-election">09-11-2021 <span class="bullet-1">●</span> Facultad de Ciencias Químicas y Farmacéuticas</p>
+      <p class="past-election">09-11-2021 <span class="bullet-2">●</span> Facultad de Ciencias</p>
+      <p class="past-election">02-11-2021 <span class="bullet-1">●</span> Facultad de Arquitectura y Urbanismo</p>
+      <p class="past-election">20-10-2021 <span class="bullet-2">●</span> Instituto de Estudios Avanzados en Educación</p>
+      <p class="past-election">05-10-2021 <span class="bullet-1">●</span> Facultad de Ciencias Veterinarias y Pecuarias</p>
+      <p class="past-election">27-09-2021 <span class="bullet-2">●</span> Instituto de Asuntos Públicos</p>
+      <p class="past-election">27-08-2021 <span class="bullet-1">●</span> Facultad de Economía y Negocios</p>
+      <p class="past-election">25-08-2021 <span class="bullet-2">●</span> Facultad de Ciencias Físicas y Matemáticas</p>
+      <p class="past-election">26-07-2021 <span class="bullet-1">●</span> Facultad de Ciencias Sociales</p>
+      <p class="past-election">14-07-2021 <span class="bullet-2">●</span> Instituto de Estudios Internacionales</p>
 
     </div>
   </div>
 </section>
+</div>
 <section class="section video-section" id="video">
   <div class="container">
     <h1 class="title pt-2" id="election-current">
@@ -188,6 +218,7 @@
     </figure>
   </div>
 </section>
+<div id="second-background">
 <section class="section faq-section" id="faq">
   <div class="container">
     <h1 class="title pt-2" id="election-current">PREGUNTAS FRECUENTES (FAQ)</h1>
@@ -247,203 +278,114 @@
  </article>
 </div>
 </section>
+</div>
 <section class="section team-section" id="equipo">
   <div class="container">
-    <h1 class="title pt-2" id="election-current">EQUIPO DE TRABAJO</h1>
+    <h1 class="title pt-2" id="election-current">EQUIPO DE DESARROLLO</h1>
+    <h1 class="subtitle pt-0" id="election-current">Marzo 2022</h1>
+    
     <div class="columns">
+      
       <div class="column">
         <div class="box has-text-centered team-box">
           <figure class="image">
-            <img
-            class="is-rounded team-image"
-            src="assets/img/ahevia.jpg"
-            />
+            <img class="is-rounded team-image" src="assets/img/ahevia.jpg"/>
           </figure>
-          <p
-          class="
-          title
-          is-size-5
-          pt-4
-          is-color-blue
-          has-text-weight-bold
-          "
-          >
-          ALEJANDRO HEVIA
-        </p>
-        <p class="subtitle is-color-blue">Coordinador Académico</p>
+          <p class="title is-size-6 pt-4 is-color-blue has-text-weight-bold">ALEJANDRO HEVIA</p>
+          <p class="subtitle is-size-6 is-color-blue">Coordinador Académico</p>
+        </div>
       </div>
+      
+      <div class="column">
+        <div class="box has-text-centered team-box">
+          <figure class="image">
+            <img class="is-rounded team-image" src="assets/img/cgomez.jpg"/>
+          </figure>
+          <p class="title is-size-6 pt-4 is-color-blue has-text-weight-bold">CAMILO GÓMEZ</p>
+          <p class="subtitle is-size-6 is-color-blue">Coordinador Operativo</p>
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="box has-text-centered team-box">
+          <figure class="image">
+            <img class="is-rounded team-image" src="assets/img/catalina.jpg"/>
+          </figure>
+          <p class="title is-size-6 pt-4 is-color-blue has-text-weight-bold">CATALINA BURGOS</p>
+          <p class="subtitle is-size-6 is-color-blue">Diseñadora Gráfica</p>
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="box has-text-centered team-box">
+          <figure class="image">
+            <img class="is-rounded team-image" src="assets/img/eriveros.jpg" />
+          </figure>
+          <p class="title is-size-6 pt-4 is-color-blue has-text-weight-bold">EDUARDO RIVEROS</p>
+          <p class="subtitle is-size-6 is-color-blue">Ingeniero de Ciberseguridad e Infraestructura</p>
+        </div>
+      </div>
+
     </div>
-    <div class="column">
-      <div class="box has-text-centered team-box">
-        <figure class="image">
-          <img
-          class="is-rounded team-image"
-          src="assets/img/cgomez.jpg"
-          />
-        </figure>
-        <p
-        class="
-        title
-        is-size-5
-        pt-4
-        is-color-blue
-        has-text-weight-bold
-        "
-        >
-        CAMILO GÓMEZ
-      </p>
-      <p class="subtitle is-color-blue">Coordinador Operativo</p>
-    </div>
-  </div>
-  <div class="column is-one-third">
-    <div class="box has-text-centered team-box">
-      <figure class="image">
-        <img
-        class="is-rounded team-image"
-        src="assets/img/catalina.jpg"
-        />
-      </figure>
-      <p
-      class="
-      title
-      is-size-5
-      pt-4
-      is-color-blue
-      has-text-weight-bold
-      "
-      >
-      CATALINA BURGOS
-    </p>
-    <p class="subtitle is-color-blue">Diseñadora Gráfica</p>
-  </div>
-</div>
-</div>
+
 <div class="columns">
-  <div class="column is-one-third">
+
+  <div class="column is-one-quarter is-offset-3">
     <div class="box has-text-centered team-box">
       <figure class="image">
-        <img
-        class="is-rounded team-image"
-        src="assets/img/eriveros.jpg"
-        />
+        <img class="is-rounded team-image" src="assets/img/cjaramillo.jpg" />
       </figure>
-      <p
-      class="
-      title
-      is-size-5
-      pt-4
-      is-color-blue
-      has-text-weight-bold
-      "
-      >
-      EDUARDO RIVEROS
-    </p>
-    <p class="subtitle is-color-blue">
-      Ingeniero de Ciberseguridad e Infraestructura
-    </p>
+      <p class=" title is-size-6 pt-4 is-color-blue has-text-weight-bold">CRISTOBAL JARAMILLO</p>
+      <p class="subtitle is-size-6 is-color-blue">Ingeniero de Desarrollo</p>
+    </div>
   </div>
-</div>
-<div class="column is-one-third">
-  <div class="box has-text-centered team-box">
-    <figure class="image">
-      <img
-      class="is-rounded team-image"
-      src="assets/img/clemente.jpg"
-      />
-    </figure>
-    <p
-    class="
-    title
-    is-size-5
-    pt-4
-    is-color-blue
-    has-text-weight-bold
-    "
-    >
-    CLEMENTE PAREDES
-  </p>
-  <p class="subtitle is-color-blue">
-    Estudiante
-  </p>
-</div>
-</div>
   
-
-<div class="column is-one-third">
-  <div class="box has-text-centered team-box">
-    <figure class="image">
-      <img
-      class="is-rounded team-image"
-      src="assets/img/fernanda.jpg"
-      />
-    </figure>
-    <p
-    class="
-    title
-    is-size-5
-    pt-4
-    is-color-blue
-    has-text-weight-bold
-    "
-    >
-    FERNANDA MACÍAS
-  </p>
-  <p class="subtitle is-color-blue">
-    Estudiante
-  </p>
-</div>
-</div>
-
-</div>
-<div class="columns">
-
-<div class="column is-one-third">
-  <div class="box has-text-centered team-box">
-    <figure class="image">
-      <img
-      class="is-rounded team-image"
-      src="assets/img/matias.jpg"
-      />
-    </figure>
-    <p
-    class="
-    title
-    is-size-5
-    pt-4
-    is-color-blue
-    has-text-weight-bold
-    "
-    >
-    RICARDO PERALTA
-  </p>
-  <p class="subtitle is-color-blue">Ingeniero de Desarrollo</p>
-</div>
-</div>
-<div class="column is-one-third">
+  <div class="column is-one-quarter">
     <div class="box has-text-centered team-box">
       <figure class="image">
-        <img
-        class="is-rounded team-image"
-        src="assets/img/grazia.png"
-        />
+        <img class="is-rounded team-image" src="assets/img/fernanda.jpg" />
       </figure>
-      <p
-      class="
-      title
-      is-size-5
-      pt-4
-      is-color-blue
-      has-text-weight-bold
-      "
-      >
-      MARÍA GRAZIA PRATO
-    </p>
-    <p class="subtitle is-color-blue">
-      Diseñadora UI/UX
-    </p>
+      <p class="title is-size-6 pt-4 is-color-blue has-text-weight-bold">FERNANDA MACÍAS</p>
+      <p class="subtitle is-size-6 is-color-blue">Estudiante de Pregrado</p>
+    </div>
   </div>
+
 </div>
-</div>
+
+<!-- <div class="columns">
+
+  <div class="column is-one-quarter">
+    <div class="box has-text-centered team-box">
+      <figure class="image">
+        <img class="is-rounded team-image" src="assets/img/clemente.jpg" />
+      </figure>
+      <p class="title is-size-5 pt-4 is-color-blue has-text-weight-bold">CLEMENTE PAREDES</p>
+      <p class="subtitle is-color-blue">Estudiante de Pregrado</p>
+    </div>
+  </div>
+  
+  <div class="column is-one-quarter">
+    <div class="box has-text-centered team-box">
+      <figure class="image">
+        <img class="is-rounded team-image" src="assets/img/matias.jpg" />
+      </figure>
+      <p class=" title is-size-5 pt-4 is-color-blue has-text-weight-bold">RICARDO PERALTA</p>
+      <p class="subtitle is-color-blue">Ingeniero de Desarrollo</p>
+    </div>
+  </div>
+
+  <div class="column is-one-quarter">
+    <div class="box has-text-centered team-box">
+      <figure class="image">
+        <img class="is-rounded team-image" src="assets/img/grazia.png" />
+      </figure>
+      <p class=" title is-size-5 pt-4 is-color-blue has-text-weight-bold">MARÍA GRAZIA PRATO</p>
+      <p class="subtitle is-color-blue">Diseñadora UI/UX</p>
+    </div>
+  </div>
+
+</div> -->
+
 <div class="is-flex is-justify-content-center" style="font-size: 2rem;">
   <span class="bullet-1">•</span> &emsp; <span class="bullet-2">•</span> &emsp; <span class="bullet-3">•</span> &emsp; <span class="bullet-4">•</span>
 </div>
@@ -459,7 +401,7 @@
 </footer>
 
 <section class="hero">
-  <div class="hero-body bottom-hero"></div>
+  <div class="hero-body bottom-hero py-4"></div>
 </section>
 </div>
 </body>

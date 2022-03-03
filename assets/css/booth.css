@@ -59,7 +59,12 @@ div#preload {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  background-image: url("../img/background.jpg") !important;
+  background-image: url("../img/background-1.jpg") !important;
+}
+
+#first-background {
+  background-attachment: fixed;
+  background-image: url("../img/background-1.jpg") !important;
 }
 
 /* Header & Navbar */
@@ -123,12 +128,68 @@ div#preload {
   font-size: 0.8rem;
 }
 
+.nav__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-bottom: 5px;
+}
+
+.nav__item {
+  font-size: 1.1rem;
+  padding-right: 15px;
+}
+
+.nav__social {
+  text-decoration: none;
+  position: relative;
+  color: #004b93;
+  padding-right: 15px;
+  font-weight: bold;
+}
+
+.nav__link {
+  text-decoration: none;
+  position: relative;
+  color: black;
+  margin-right: 15px;
+  font-weight: bold;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.nav__link:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transition: 0.3s;
+  background: #6dcaf3;
+}
+
+.nav__link:hover {
+  color: #6dcaf3;
+}
+
+.nav__social:hover {
+  color: #6dcaf3;
+}
+
+.nav__link:hover:after {
+  background: #004b93;
+  width: 50%;
+  left: 25%;
+  transition: 0.3s;
+}
+
 #navbar-button-1 {
-  border-bottom: 2px solid #004c94;
+  border-bottom: 2px solid #004b93;
 }
 
 #navbar-button-1:hover {
-  color: #004c94 !important;
+  color: #004b93 !important;
   font-weight: bold;
 }
 
@@ -165,13 +226,13 @@ div#preload {
 
 #election-title {
   font-family: "Arial Black", sans-serif;
-  color: #004c94 !important;
+  color: #004b93 !important;
   text-align: right;
 }
 
 #election-current {
   font-family: "Arial Black", sans-serif;
-  color: #004c94 !important;
+  color: #004b93 !important;
   text-align: center;
 }
 
@@ -189,8 +250,9 @@ div#preload {
   font-family: "Arial Black", sans-serif;
   font-weight: bold;
   font-size: 1.4rem;
-  color: #004c94;
+  color: #004b93;
   text-align: right;
+  padding-right: 20px;
 }
 
 .big-text-title {
@@ -266,8 +328,8 @@ div#preload {
 .current-election-title {
  font-size: 1.5rem; 
  font-family: "Arial Black", sans-serif;
- color: #004c94;
- border-bottom: 2px solid #004c94;
+ color: #004b93;
+ border-bottom: 2px solid #004b93;
 }
 
 .current-election-item {
@@ -300,22 +362,22 @@ div#preload {
 }
 
 .bullet-1 {
-  color: #004c94 !important;
+  color: #004b93 !important;
   font-weight: bold;
 }
 
 .bullet-2 {
-  color: #e43427 !important;
+  color: #0095d4 !important;
   font-weight: bold;
 }
 
 .bullet-3 {
-  color: #027d47 !important;
+  color: #6dcaf3 !important;
   font-weight: bold;
 }
 
 .bullet-4 {
-  color: #fdd245 !important;
+  color: #93d5f6 !important;
   font-weight: bold;
 }
 
@@ -345,8 +407,13 @@ div#preload {
   background-color: #d9e4ef;
 }
 
+#second-background {
+  background-attachment: fixed;
+  background-image: url("../img/background-2.jpg") !important;
+}
+
 .faq-section {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(147, 213, 246, 0.75);;
 }
 
 .team-section {
@@ -363,15 +430,15 @@ div#preload {
 }
 
 .team-image {
-  border: 4px solid #004c94;
+  border: 4px solid #004b93;
 }
 
 .is-color-blue {
-  color: #004c94 !important;
+  color: #004b93 !important;
 }
 
 .message-header {
-  background-color: #004c94 !important;
+  background-color: #004b93 !important;
 }
 
 #election-status-1 {
@@ -533,7 +600,7 @@ div#preload {
 }
 
 #select-image {
-  border: 1px solid #004c94;
+  border: 1px solid #004b93;
 }
 
 #review-image {
@@ -576,7 +643,7 @@ div#preload {
 }
 
 .question-box {
-  background-color: #004c94 !important;
+  background-color: #004b93 !important;
   line-height: 3.5rem;
 }
 
@@ -605,11 +672,11 @@ input[type=radio] {
 }
 
 .previous-button {
-  background-color: #004c94 !important;
+  background-color: #004b93 !important;
 }
 
 .next-button {
-  background-color: #004c94 !important;
+  background-color: #004b93 !important;
 }
 
 .proceed-button {
@@ -627,7 +694,7 @@ input[type=radio] {
 }
 
 .review-answer {
-  background-color: #004c94 !important;
+  background-color: #004b93 !important;
 }
 
 .review-buttons {
@@ -636,7 +703,7 @@ input[type=radio] {
 
 #audit-button {
   background-color: rgba(0, 76, 148, 0.15);
-  color: #004c94 !important;
+  color: #004b93 !important;
 }
 
 .question-audit {
@@ -694,7 +761,7 @@ input[type=radio] {
 }
 
 #audit-vote-tab {
-  background-color: #004c94;
+  background-color: #004b93;
   color: white;
   font-size: 1.2rem;
 }
@@ -710,7 +777,7 @@ input[type=radio] {
 }
 
 #pane-1 {
-  border: 15px solid #004c94;
+  border: 15px solid #004b93;
   border-top-left-radius: 0;
 }
 
@@ -734,7 +801,7 @@ input[type=radio] {
 #back-to-vote {
   border-radius: 10px !important;
   color: white;
-  background-color: #004c94 !important;
+  background-color: #004b93 !important;
 }
 
 #send-audited-vote {
@@ -750,7 +817,7 @@ input[type=radio] {
 }
 
 .button-copy-audited {
-  background-color: #004c94 !important;
+  background-color: #004b93 !important;
   color: white !important;
 }
 
@@ -4936,7 +5003,7 @@ button.dropdown-item.is-active {
 
 .message {
   background-color: whitesmoke;
-  border-radius: 4px;
+  border-radius: 15px;
   font-size: 1rem;
 }
 .message strong {
@@ -5065,7 +5132,7 @@ button.dropdown-item.is-active {
 .message-header {
   align-items: center;
   background-color: #4a4a4a;
-  border-radius: 4px 4px 0 0;
+  border-radius: 15px 15px 0 0;
   color: #fff;
   display: flex;
   font-weight: 700;
@@ -10982,7 +11049,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .footer {
-  background-color: #004c94;
+  background-color: #004b93;
   padding: 0.5rem;
   color: white;
 }
