@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Participa UChile</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/booth.css" />
+  <link rel="shortcut icon" type="image/png" href="favicon.ico" />
+  <script src="https://kit.fontawesome.com/9542c9df50.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+  <!-- Matomo -->
+  <script type="text/javascript">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//analytics.labs.clcert.cl/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '1']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+</head>
+<body class="has-navbar background-elections">
+  
+    <div class="navbar-div">
+      <div class="container">
+        <nav class="navbar custom-navbar pt-2 pl-0" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand is-justify-content-center is-align-items-center">
+            <a class="navbar-item is-hidden-desktop pr-0 pl-2 mr-4 ml-4" href="https://participa.uchile.cl">
+              <img src="assets/svg/logo.svg" width="300" />
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="$('.navbar-burger').toggleClass('is-active'); $('.navbar-menu').toggleClass('is-active');">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+
+          <div id="navbarBasicExample" class="navbar-menu ml-6">
+            <div class="navbar-end">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="/" title="" class="nav__link">HOME</a>
+                </li>
+                <li class="nav__item">
+                      <a href="elecciones.html" title="" class="nav__link">ELECCIONES</a>
+                  </li>
+                <!-- <li class="nav__item">
+                  <a href="#video" title="" class="nav__link">COMO VOTAR</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#faq" title="" class="nav__link">FAQ</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#equipo" title="" class="nav__link">EQUIPO</a>
+                </li> -->
+                <li class="nav__item pr-0">
+                  <a target="_blank" href="https://www.twitter.com/participaUChile" title="" class="nav__social">
+                    <span class="icon">
+                      <i class="fab fa-twitter"></i>
+                    </span>
+                  </a>
+                </li>
+                <li class="nav__item pr-0">
+                  <a target="_blank" href="mailto:participa@uchile.cl" title="" class="nav__social">
+                    <span class="icon">
+                      <i class="far fa-envelope"></i>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <button onclick="topFunction()" id="top-button" title="Ir al Inicio">▲</button>    
+
+    <section class="section top-section pt-3 is-hidden-touch">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-flex pb-0">
+            <img src="assets/svg/dibujo_1.svg" />
+          </div>
+          <div class="column is-align-self-center">
+            <p class="has-text-weight-bold text-title">
+              <span class="big-text-title">LISTADO DE VOTACIONES
+              <br/>Y CONSULTAS</span>
+            </p>
+          </div>
+          <div class="column is-align-self-center">
+            <figure class="image">
+              <img src="assets/svg/logo.svg" />
+            </figure>
+          </div>
+        </div>
+      </div>  
+    </section>
+
+    <section class="section past-section" id="realizadas">
+      <div class="container past-container">
+
+        <div class="box has-text-centered has-text-weight-bold" style="border: 5px solid gold; width: 50%; margin-left: auto; margin-right: auto; font-size: 1.2rem;">🛈 Página en Construcción 🛈</div>
+
+        <div class="past-elections-box pb-2">
+
+          <p class="election-info mb-2 mx-2">
+            <span class="has-text-weight-bold current-election-title">ELECCIONES REALIZADAS</span>
+          </p>
+          <ul>
+            <li>
+              <div class="box past-election-1 py-4 mb-3"> 
+                <span>ELECCIÓN: Facultad de Ciencias Físicas y Matemáticas</span>
+                <br/>
+                <span>FECHA: 14 de diciembre de 2021</span>
+                <br/><br/>
+                <div class="columns mb-0">
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-1" disabled>RESULTADOS</a>
+                  </div>
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-1" disabled>VERIFICACIÓN</a>
+                  </div>
+                </div>
+              </p>
+            </li>
+            <li>
+              <div class="box past-election-2 py-4 mb-3">
+                <span>ELECCIÓN: Facultad de Economía y Negocios</span>
+                <br/>
+                <span>FECHA: 03 de diciembre de 2021</span>
+                <br/><br/>
+                <div class="columns mb-0">
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-2" disabled>RESULTADOS</a>
+                  </div>
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-2" disabled>VERIFICACIÓN</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-1 py-4 mb-3">
+                <span>ELECCIÓN: Instituto de Estudios Internacionales</span>
+                <br/>
+                <span>FECHA: 17 de noviembre de 2021</span>
+                <br/><br/>
+                <div class="columns mb-0">
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-1" disabled>RESULTADOS</a>
+                  </div>
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-1" disabled>VERIFICACIÓN</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-2 py-4 mb-3">
+                <span>ELECCIÓN: Asociación de Funcionarios Servicios Centrales</span>
+                <br/>
+                <span>FECHA: 11 de noviembre de 2021</span>
+                <br/><br/>
+                <div class="columns mb-0">
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-2" disabled>RESULTADOS</a>
+                  </div>
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-2" disabled>VERIFICACIÓN</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-1 py-4 mb-3">
+                <span>ELECCIÓN: Facultad de Ciencias Químicas y Farmacéuticas</span>
+                <br/>
+                <span>FECHA: 09 de noviembre de 2021</span>
+                <br/><br/>
+                <div class="columns mb-0">
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-1" disabled>RESULTADOS</a>
+                  </div>
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-1" disabled>VERIFICACIÓN</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-2 py-4 mb-3">
+                <span>ELECCIÓN: Facultad de Ciencias</span>
+                <br/>
+                <span>FECHA: 09 de noviembre de 2021</span>
+                <br/><br/>
+                <div class="columns mb-0">
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-2" disabled>RESULTADOS</a>
+                  </div>
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-2" disabled>VERIFICACIÓN</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-1 py-4 mb-3">
+                <span>ELECCIÓN: Facultad de Arquitectura y Urbanismo</span>
+                <br/>
+                <span>FECHA: 02 de noviembre de 2021</span>
+                <br/><br/>
+                <div class="columns mb-0">
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-1" disabled>RESULTADOS</a>
+                  </div>
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-1" disabled>VERIFICACIÓN</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-2 py-4 mb-3">
+                <span>ELECCIÓN: Instituto de Estudios Avanzados en Educación</span>
+                <br/>
+                <span>FECHA: 20 de octubre de 2021</span>
+                <br/><br/>
+                <div class="columns mb-0">
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-2" disabled>RESULTADOS</a>
+                  </div>
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-2" disabled>VERIFICACIÓN</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-1 py-4 mb-3">
+                <span>ELECCIÓN: Facultad de Ciencias Veterinarias y Pecuarias</span>
+                <br/>
+                <span>FECHA: 05 de octubre de 2021</span>
+                <br/><br/>
+                <div class="columns mb-0">
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-1" disabled>RESULTADOS</a>
+                  </div>
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-1" disabled>VERIFICACIÓN</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-2 py-4 mb-3">
+                <span>ELECCIÓN: Instituto de Asuntos Públicos</span>
+                <br/>
+                <span>FECHA: 27 de septiembre de 2021</span>
+                <br/><br/>
+                <div class="columns mb-0">
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-2" disabled>RESULTADOS</a>
+                  </div>
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-2" disabled>VERIFICACIÓN</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-1 py-4 mb-3">
+                <span>ELECCIÓN: Facultad de Economía y Negocios</span>
+                <br/>
+                <span>FECHA: 27 de agosto de 2021</span>
+                <br/><br/>
+                <div class="columns mb-0">
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-1" disabled>RESULTADOS</a>
+                  </div>
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-1" disabled>VERIFICACIÓN</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-2 py-4 mb-3">
+                <span>ELECCIÓN: Facultad de Ciencias Físicas y Matemáticas</span>
+                <br/>
+                <span>FECHA: 25 de agosto de 2021</span>
+                <br/><br/>
+                <div class="columns mb-0">
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-2" disabled>RESULTADOS</a>
+                  </div>
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-2" disabled>VERIFICACIÓN</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-1 py-4 mb-3">
+                <span>ELECCIÓN: Facultad de Ciencias Sociales</span>
+                <br/>
+                <span>FECHA: 26 de juio de 2021</span>
+                <br/><br/>
+                <div class="columns mb-0">
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-1" disabled>RESULTADOS</a>
+                  </div>
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-1" disabled>VERIFICACIÓN</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-2 py-4 mb-3">
+                <span>ELECCIÓN: Instituto de Estudios Internacionales</span>
+                <br/>
+                <span>FECHA: 14 de julio de 2021</span>
+                <br/><br/>
+                <div class="columns mb-0">
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-2" disabled>RESULTADOS</a>
+                  </div>
+                  <div class="column past-election-button-container">
+                    <a class="button past-election-button-2" disabled>VERIFICACIÓN</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+      <div class="is-flex is-justify-content-center pt-6" style="font-size: 2rem;">
+        <span class="bullet-1">•</span> &emsp; <span class="bullet-2">•</span> &emsp; <span class="bullet-3">•</span> &emsp; <span class="bullet-4">•</span>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container has-text-centered">
+        <p>
+          PARTICIPA.UCHILE es un proyecto de la Universidad de Chile - 2022
+        </p>
+      </div>
+    </footer>
+
+    <section class="hero">
+      <div class="hero-body bottom-hero py-4" style="background-color: transparent;"></div>
+    </section>
+  
+</body>
+</html>

@@ -27,13 +27,13 @@
   </script>
   <!-- End Matomo Code -->
 </head>
-<body class="has-navbar">
+<body class="has-navbar background-elections">
   <div id="">
     <div class="navbar-div">
       <div class="container">
         <nav class="navbar custom-navbar pt-2 pl-0" role="navigation" aria-label="main navigation">
           <div class="navbar-brand is-justify-content-center is-align-items-center">
-            <a class="navbar-item is-hidden-desktop pr-0 pl-2 mr-4" href="https://participa.uchile.cl">
+            <a class="navbar-item is-hidden-desktop pr-0 pl-2 mr-4 ml-4" href="https://participa.uchile.cl">
               <img src="assets/svg/logo.svg" width="300" />
             </a>
 
@@ -51,7 +51,7 @@
                       <a href="#eleccion" title="" class="nav__link">EN CURSO</a>
                   </li>
                   <li class="nav__item">
-                      <a href="#realizadas" title="" class="nav__link">REALIZADAS</a>
+                      <a href="elecciones.html" title="" class="nav__link">ELECCIONES</a>
                   </li>
                   <li class="nav__item">
                       <a href="#video" title="" class="nav__link">COMO VOTAR</a>
@@ -77,28 +77,13 @@
                       </a>
                   </li>
                 </ul>
-              
-              <!-- <a class="navbar-button navbar-item" id="navbar-button-1" href="#eleccion"> En Curso </a>
-              <a class="navbar-button navbar-item" id="navbar-button-2" href="#realizadas"> Realizadas </a>
-              <a class="navbar-button navbar-item" id="navbar-button-3" href="#video"> ¿Cómo votar? </a>
-              <a class="navbar-button navbar-item" id="navbar-button-4" href="#faq"> FAQ </a>
-              <a class="navbar-button navbar-item" id="navbar-button-1" href="#equipo"> Equipo </a>
-              <a class="navbar-item" target="_blank" href="https://www.twitter.com/participaUChile">
-                <span class="icon">
-                  <i class="fab fa-twitter"></i>
-                </span>
-              </a>
-              <a class="navbar-item" target="_blank" href="mailto:participa@uchile.cl">
-                <span class="icon">
-                  <i class="far fa-envelope"></i>
-                </span>
-              </a> -->
-
-            </div>
+              </div>
           </div>
         </nav>
       </div>
     </div>
+
+    <button onclick="topFunction()" id="top-button" title="Ir al Inicio">▲</button>    
 
     <section class="section top-section pt-3 is-hidden-touch">
       <div class="container">
@@ -108,9 +93,9 @@
           </div>
           <div class="column is-align-self-center">
             <p class="has-text-weight-bold text-title">
-              <span class="big-text-title">BIENVENIDO</span>
-              <br/>AL SISTEMA DE
-              <br/>VOTACIÓN Y CONSULTAS</p>
+              <span class="big-text-title">PÁGINA PRINCIPAL</span>
+              <br/>SISTEMA DE VOTACIÓN
+              <br/>Y CONSULTAS</p>
             </div>
             <div class="column is-align-self-center">
 
@@ -136,29 +121,29 @@
                 <div class="election-box">
                   <div class="election-box-info">
                     <p class="election-info mb-2 mx-2">
-                      <span class="has-text-weight-bold current-election-title">ELECCIÓN EN CURSO</span>
+                      <span class="has-text-weight-bold current-election-title">CONSULTA EN CURSO</span>
                     </p>
                     <!-- <p class="election-info mb-2 mx-2">
-                      <span class="has-text-weight-bold current-election-item">FACULTAD: </span><br/>Facultad de Ciencias Físicas y Matemáticas
-                    </p>
-                    <p class="election-info mb-2 mx-2">
-                      <span class="has-text-weight-bold current-election-item">DEPARTAMENTO: </span><br/>Departamento de Ingeniería Industrial
-                    </p>
-                    <p class="election-info mb-2 mx-2">
-                      <span class="has-text-weight-bold">FECHA: </span><br/>martes 14 de diciembre, de 09:00 a 17:00 hrs.
+                      <span class="has-text-weight-bold current-election-item">CONSULTA CONSTITUYENTE UNIVERSIDAD DE CHILE</span><br>
+                    </p> -->
+                    <figure class="image my-5 banner-image">
+                      <img src="assets/img/banner-constituyente.jpg">
+                    </figure>
+                    <p class="election-info mb-2 mx-2" style="text-align: center;">
+                      Consulta válida del <span class="has-text-weight-bold">lunes 28 de marzo</span> al <span class="has-text-weight-bold">miércoles 30 de marzo.</span>
                     </p>
                     <div class="election-info mx-2 pt-3">
-                      <p class="has-text-weight-bold has-text-centered pb-2">INGRESAR A VOTAR</p>
-                      <a href="#" target="_blank">
-                        <button class="button election-button is-outlined" disabled>
-                          <span class="has-text-white">ELECCIÓN DEL DEPARTAMENTO DE INGENIERÍA INDUSTRIAL</span>
+                      <!-- <p class="has-text-weight-bold pb-2">Haz click en la consulta para responder &#9660;</p> -->
+                      <a href="https://participauchile.cl/vota/app/e/consulta-constituyente-uchile/vote" target="_blank">
+                        <button class="button election-button is-outlined">
+                          <span class="has-text-white">RESPONDER CONSULTA AQUÍ</span>
                         </button>
                       </a>
-                      <h1 id="election-status-1" class="has-text-weight-bold pt-2">⚠ ELECCIÓN CERRADA</h1>
-                    </div> -->
-                    <div class="election-info mx-2 pt-3">
-                      <p class="has-text-weight-bold has-text-centered pb-2">NINGUNA ELECCIÓN EN CURSO</p>
+                      <!-- <h1 id="election-status-1" class="has-text-weight-bold pt-2">⚠ CONSULTA AUN NO ABIERTA</h1> -->
                     </div>
+                    <!-- <div class="election-info mx-2 pt-3">
+                      <p class="has-text-weight-bold has-text-centered pb-2">NINGUNA ELECCIÓN EN CURSO</p>
+                    </div> -->
                   </div>
                 </div>
               </div>
@@ -171,31 +156,7 @@
   </div>
 </section>
 
-<section class="section past-section" id="realizadas">
-  <div class="container">
-    <div class="past-elections-box pb-2">
 
-      <p class="election-info mb-2 mx-2">
-        <span class="has-text-weight-bold current-election-title">ELECCIONES REALIZADAS</span>
-      </p>
-      <p class="past-election">14-12-2021 <span class="bullet-1">●</span> Facultad de Ciencias Físicas y Matemáticas</p>
-      <p class="past-election">03-12-2021 <span class="bullet-2">●</span> Facultad de Economía y Negocios</p>
-      <p class="past-election">17-11-2021 <span class="bullet-1">●</span> Instituto de Estudios Internacionales</p>
-      <p class="past-election">11-11-2021 <span class="bullet-2">●</span> Asociación de Funcionarios Servicios Centrales</p>
-      <p class="past-election">09-11-2021 <span class="bullet-1">●</span> Facultad de Ciencias Químicas y Farmacéuticas</p>
-      <p class="past-election">09-11-2021 <span class="bullet-2">●</span> Facultad de Ciencias</p>
-      <p class="past-election">02-11-2021 <span class="bullet-1">●</span> Facultad de Arquitectura y Urbanismo</p>
-      <p class="past-election">20-10-2021 <span class="bullet-2">●</span> Instituto de Estudios Avanzados en Educación</p>
-      <p class="past-election">05-10-2021 <span class="bullet-1">●</span> Facultad de Ciencias Veterinarias y Pecuarias</p>
-      <p class="past-election">27-09-2021 <span class="bullet-2">●</span> Instituto de Asuntos Públicos</p>
-      <p class="past-election">27-08-2021 <span class="bullet-1">●</span> Facultad de Economía y Negocios</p>
-      <p class="past-election">25-08-2021 <span class="bullet-2">●</span> Facultad de Ciencias Físicas y Matemáticas</p>
-      <p class="past-election">26-07-2021 <span class="bullet-1">●</span> Facultad de Ciencias Sociales</p>
-      <p class="past-election">14-07-2021 <span class="bullet-2">●</span> Instituto de Estudios Internacionales</p>
-
-    </div>
-  </div>
-</section>
 </div>
 <section class="section video-section" id="video">
   <div class="container">
@@ -276,6 +237,14 @@
      El sistema permite que, cualquier votante, luego de haber votado pueda ingresar nuevamente y reiniciar el proceso de votación, emitiendo un nuevo voto que reemplaza al voto anterior. El sistema nunca almacena más de un voto por votante. Si bien para un votante puede parecer que emite un "segundo voto", eso no es efectivo, pues efectivamente está reemplazando su voto. En particular, no puede darse el caso que un mismo votante tenga dos votos o más, siempre tendrá a lo más un voto. Esta funcionalidad es intencional y, si bien no existe en un sistema de votación de “lápiz y papel”, es posible de implementar de forma segura en un sistema electrónico. Es una medida estándar de mitigación parcial contra el problema de la coerción. Si bien no es perfecta, es simple de implementar y en entornos de baja coerción se considera razonablemente efectiva. Para la tranquilidad de todas y todos, podemos aclarar que no es una característica errónea o en necesidad de arreglo, pues no viola la unicidad del voto.
    </div>
  </article>
+ <article class="message">
+    <div class="message-header">
+      <p>7. ¿participa.uchile.cl ó participauchile.cl? ¿Cuál es la dirección web correcta?</p>
+    </div>
+    <div class="message-body">
+     Ambas direcciones web son válidas para acceder a las votaciones y consultas realizadas por Participa UChile. 
+   </div>
+ </article>
 </div>
 </section>
 </div>
@@ -330,7 +299,7 @@
 
 <div class="columns">
 
-  <div class="column is-one-quarter is-offset-3">
+  <div class="column is-one-quarter">
     <div class="box has-text-centered team-box">
       <figure class="image">
         <img class="is-rounded team-image" src="assets/img/cjaramillo.jpg" />
@@ -350,41 +319,17 @@
     </div>
   </div>
 
+  <div class="column is-one-quarter">
+    <div class="box has-text-centered team-box">
+      <figure class="image">
+        <img class="is-rounded team-image" src="assets/img/raul.jpg" />
+      </figure>
+      <p class="title is-size-6 pt-4 is-color-blue has-text-weight-bold">RAÚL DE LA FUENTE</p>
+      <p class="subtitle is-size-6 is-color-blue">Estudiante de Pregrado</p>
+    </div>
+  </div>
+
 </div>
-
-<!-- <div class="columns">
-
-  <div class="column is-one-quarter">
-    <div class="box has-text-centered team-box">
-      <figure class="image">
-        <img class="is-rounded team-image" src="assets/img/clemente.jpg" />
-      </figure>
-      <p class="title is-size-5 pt-4 is-color-blue has-text-weight-bold">CLEMENTE PAREDES</p>
-      <p class="subtitle is-color-blue">Estudiante de Pregrado</p>
-    </div>
-  </div>
-  
-  <div class="column is-one-quarter">
-    <div class="box has-text-centered team-box">
-      <figure class="image">
-        <img class="is-rounded team-image" src="assets/img/matias.jpg" />
-      </figure>
-      <p class=" title is-size-5 pt-4 is-color-blue has-text-weight-bold">RICARDO PERALTA</p>
-      <p class="subtitle is-color-blue">Ingeniero de Desarrollo</p>
-    </div>
-  </div>
-
-  <div class="column is-one-quarter">
-    <div class="box has-text-centered team-box">
-      <figure class="image">
-        <img class="is-rounded team-image" src="assets/img/grazia.png" />
-      </figure>
-      <p class=" title is-size-5 pt-4 is-color-blue has-text-weight-bold">MARÍA GRAZIA PRATO</p>
-      <p class="subtitle is-color-blue">Diseñadora UI/UX</p>
-    </div>
-  </div>
-
-</div> -->
 
 <div class="is-flex is-justify-content-center" style="font-size: 2rem;">
   <span class="bullet-1">•</span> &emsp; <span class="bullet-2">•</span> &emsp; <span class="bullet-3">•</span> &emsp; <span class="bullet-4">•</span>
@@ -395,7 +340,7 @@
 <footer class="footer">
   <div class="container has-text-centered">
     <p>
-      PARTICIPA.UCHILE es un proyecto de la Universidad de Chile - 2021
+      PARTICIPA.UCHILE es un proyecto de la Universidad de Chile - 2022
     </p>
   </div>
 </footer>
@@ -405,4 +350,25 @@
 </section>
 </div>
 </body>
+<script type="text/javascript">
+      //Get the button:
+      mybutton = document.getElementById("top-button");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      } 
+  </script>
 </html>

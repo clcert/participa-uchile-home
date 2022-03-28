@@ -128,6 +128,18 @@ div#preload {
   font-size: 0.8rem;
 }
 
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    box-shadow: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+.navbar-burger {
+  margin-right: auto;
+}
+
 .nav__list {
   display: flex;
   align-items: center;
@@ -135,9 +147,23 @@ div#preload {
   padding-bottom: 5px;
 }
 
+@media screen and (max-width: 768px) {
+  .nav__list {
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+}
+
 .nav__item {
   font-size: 1.1rem;
   padding-right: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__item {
+    margin-bottom: 0.5rem;
+    padding-right: 0;
+  }
 }
 
 .nav__social {
@@ -148,10 +174,16 @@ div#preload {
   font-weight: bold;
 }
 
+@media screen and (max-width: 768px) {
+  .nav__social {
+    display: none;
+  }
+}
+
 .nav__link {
   text-decoration: none;
   position: relative;
-  color: black;
+  color: #004b93;
   margin-right: 15px;
   font-weight: bold;
   padding-left: 5px;
@@ -182,6 +214,26 @@ div#preload {
   width: 50%;
   left: 25%;
   transition: 0.3s;
+}
+
+#top-button {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: 2px white solid; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #004b93; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#top-button:hover {
+  background-color: #6dcaf3; /* Add a dark-grey background on hover */
 }
 
 #navbar-button-1 {
@@ -236,6 +288,10 @@ div#preload {
   text-align: center;
 }
 
+.banner-image {
+  border: 5px solid #6dcaf3;
+}
+
 .title-section {
   background-color: white;
 }
@@ -249,7 +305,7 @@ div#preload {
 .text-title {
   font-family: "Arial Black", sans-serif;
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: #004b93;
   text-align: right;
   padding-right: 20px;
@@ -258,7 +314,7 @@ div#preload {
 .big-text-title {
   font-family: "Arial Black", sans-serif;
   font-weight: bold;
-  font-size: 2.4rem;
+  font-size: 1.9rem;
 }
 
 .election-section {
@@ -291,11 +347,8 @@ div#preload {
   border: 1px solid #004990 !important;
   border-radius: 6px;
   color: black;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 700px;
   overflow: auto;
-  max-height: 500px;
+  max-height: 750px;
   padding-left: 3rem !important;
   padding-right: 3rem !important;
 }
@@ -338,8 +391,6 @@ div#preload {
 
 .election-button {
   display: flex !important;
-  margin-left: auto;
-  margin-right: auto;
   align-self: center;
   color: ##e43427 !important;
   font-family: "Arial", sans-serif !important;
@@ -348,17 +399,64 @@ div#preload {
   white-space: normal !important;
   height: auto !important;
   background-color: #e43427 !important;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+@media screen and (max-width: 768px) {
+  .election-button {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .past-section {
   background-color: rgba(0, 76, 148, 0.75);
 }
 
-.past-election {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  padding-left: 0.5rem;
-  margin-left: 0.5rem;
+.background-elections {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-image: url("../img/background-1.jpg") !important;
+}
+
+.past-election-1 {
+  font-size: 1rem;
+  border: 3px solid #004b93 !important;
+}
+
+.past-election-2 {
+  font-size: 1rem;
+  border: 3px solid #6dcaf3 !important;
+}
+
+.past-election-button-container {
+  text-align: center;
+}
+
+.past-election-button-1 {
+  border-color: #004b93 !important;
+  color: #004b93 !important;
+  border-width: 2px !important;
+  font-weight: bold !important;
+}
+
+.past-election-button-1:hover {
+  background-color: #93d5f6;
+}
+
+.past-election-button-2 {
+  border-color: #6dcaf3 !important;
+  color: #004b93 !important;
+  border-width: 2px !important;
+  font-weight: bold !important;
+}
+
+.past-election-button-2:hover {
+  background-color: #93d5f6;
 }
 
 .bullet-1 {
@@ -426,7 +524,7 @@ div#preload {
   box-shadow: none !important;
   margin-left: auto;
   margin-right: auto;
-  max-width: 350px;
+  max-width: 250px;
 }
 
 .team-image {
