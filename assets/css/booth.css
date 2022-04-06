@@ -216,6 +216,18 @@ div#preload {
   transition: 0.3s;
 }
 
+.current-election-figure {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+#current-election-title-down {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #004b93;
+}
+
 #top-button {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
