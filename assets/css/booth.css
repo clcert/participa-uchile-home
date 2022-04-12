@@ -360,7 +360,6 @@ div#preload {
   border-radius: 6px;
   color: black;
   overflow: auto;
-  max-height: 750px;
   padding-left: 3rem !important;
   padding-right: 3rem !important;
 }
@@ -436,12 +435,12 @@ div#preload {
 }
 
 .past-election-1 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   border: 3px solid #004b93 !important;
 }
 
 .past-election-2 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   border: 3px solid #6dcaf3 !important;
 }
 
