@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Participa UChile</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/booth.css" />
+  <link rel="shortcut icon" type="image/png" href="favicon.ico" />
+  <script src="https://kit.fontawesome.com/9542c9df50.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+  <script type="text/javascript" src="assets/js/modal.js"></script>
+  <!-- Matomo -->
+  <script type="text/javascript">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//analytics.labs.clcert.cl/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '1']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+</head>
+<body class="has-navbar background-news">
+  
+    <div class="navbar-div">
+      <div class="container">
+        <nav class="navbar custom-navbar pt-2 pl-0" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand is-justify-content-center is-align-items-center">
+            <a class="navbar-item is-hidden-desktop pr-0 pl-2 mr-4 ml-4" href="https://participa.uchile.cl">
+              <img src="assets/svg/logo.svg" width="300" />
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="$('.navbar-burger').toggleClass('is-active'); $('.navbar-menu').toggleClass('is-active');">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+
+          <div id="navbarBasicExample" class="navbar-menu ml-6">
+            <div class="navbar-end">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="/" title="" class="nav__link">HOME</a>
+                </li>
+                <li class="nav__item">
+                      <a href="elecciones.html" title="" class="nav__link">ELECCIONES</a>
+                </li>
+                <li class="nav__item">
+                      <a href="noticias.html" title="" class="nav__link">NOTICIAS</a>
+                </li>
+                <li class="nav__item pr-0">
+                  <a target="_blank" href="https://www.twitter.com/participaUChile" title="" class="nav__social">
+                    <span class="icon">
+                      <i class="fab fa-twitter"></i>
+                    </span>
+                  </a>
+                </li>
+                <li class="nav__item pr-0">
+                  <a target="_blank" href="mailto:participa@uchile.cl" title="" class="nav__social">
+                    <span class="icon">
+                      <i class="far fa-envelope"></i>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <button onclick="topFunction()" id="top-button" title="Ir al Inicio">▲</button>    
+
+    <section class="section top-section pt-3 is-hidden-touch">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-flex pb-0">
+            <img src="assets/svg/dibujo_1.svg" />
+          </div>
+          <div class="column is-align-self-center">
+            <p class="has-text-weight-bold text-title">
+              <span class="big-text-title">NOTICIAS Y PRENSA</span>
+            </p>
+          </div>
+          <div class="column is-align-self-center">
+            <figure class="image">
+              <img src="assets/svg/logo.svg" />
+            </figure>
+          </div>
+        </div>
+      </div>  
+    </section>
+
+    <section class="section news-section" id="noticias">
+      <div class="container">
+        <div class="columns">
+          
+          <div class="column is-one-third">
+            <div class="card news-card">
+              <h1 class="is-size-6 has-text-centered has-text-white m-3 pt-2">12 de abril de 2022</h1>
+              <h1 class="is-size-5 mb-2 has-text-centered has-text-white m-3">Exitosa votación del Comité Paritario de Higiene y Seguridad de DEMRE</h1>
+              <div class="card-image has-background-white">
+                <figure class="image is-4by3">
+                  <img src="assets/img/logo-demre-4-3.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content pb-0 mx-3">
+                <div class="content has-text-justified is-size-6 has-text-white">
+                  El Viernes 8 de Abril 2022, se realizó la elección del Comité Paritario de Higiene y Seguridad de DEMRE. Participa UChile proveyó a la comunidad de funcionarios la plataforma para que esta elección electrónica se desarrollara de forma transparente, segura y eficaz.
+                  <br>
+                  <div class="has-text-left mt-3 pb-3">
+                    <span class="js-modal-trigger news-read-more" data-target="modal-1">LEER MÁS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal" id="modal-1">
+            <div class="modal-background"></div>
+              <div class="modal-content news-modal-content">
+                <div class="box news-box">
+                  <div>
+                    <h1 class="is-size-4 has-text-centered mb-4 news-modal-title">Exitosa votación del Comité Paritario de Higiene y Seguridad de DEMRE</h1>
+                    <p>El Viernes 8 de Abril 2022, se realizó la elección del Comité Paritario de Higiene y Seguridad de DEMRE. Participa UChile proveyó a la comunidad de funcionarios la plataforma para que esta elección electrónica se desarrollara de forma transparente, segura y eficaz.</p><br>
+                    <p>Cabe destacar que esta votación es la primera elección donde una organización de personal de colaboración de la institución usa los servicios de Participa UChile.</p><br>
+                    <p>Asimismo, durante estas elecciones, Participa UChile estrenó una nueva interfaz para realizar la votación y se utilizaron tres custodios de claves.</p><br>
+                    <p>“El proceso funcionó perfectamente. La elección era importante pues marcó un precedente para las futuras elecciones del personal de colaboración. Además de que estrenamos una nueva manera de desplegar los candidatos que resultó funcionar bastante bien. No tuvimos ninguna queja, además que las personas responsables de DEMRE de llevar a cabo la elección quedó bien satisfecha con la operación del sistema”,  explica Camilo Gómez, coordinador operativo de Participa UChile.</p><br>
+                    <p>La jornada finalizó a las 15:00 con una participación de más del 70% del padrón electoral.</p>
+                    
+                    <h1 class="is-size-5 my-4 news-modal-title">Sobre Participa UChile</h1>
+                    <p>Votar de forma remota, a través de dispositivos electrónicos y con altos estándares de seguridad es la oportunidad que ofrece a la comunidad, Participa UChile, iniciativa de investigación aplicada liderada y ejecutada por académicos, egresados y estudiantes de la Facultad de Ciencias Físicas y Matemáticas (FCFM).</p><br>
+                    <p>Cabe destacar que –al ser un sistema de votación electrónica remota– en Participa UChile, los electores pueden sufragar desde un computador, un teléfono o una tablet, sin necesidad de recurrir a un recinto físico de votación, ya que para ingresar al sistema sólo requiere tener activa su cuenta institucional (pasaporte, miuchile). El sistema está orientado a elecciones dentro de la comunidad universitaria y busca explorar la aplicación científica de tecnología transparente y verificable en los procesos de participación universitaria.</p>
+                  </div>
+                </div>
+              </div>
+              <button class="modal-close is-large" aria-label="close"></button>
+            </div>
+        </div>
+    </div>  
+    </section>
+
+</body>
+</html>

@@ -371,6 +371,30 @@ div#preload {
   }
 }
 
+.news-card {
+  background-color: #004990 !important;
+}
+
+.news-read-more {
+  color: #93d5f6;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.news-modal-content {
+  width: 800px !important;
+  max-width: 80%;
+}
+
+.news-box {
+  border: 15px solid #004990;
+}
+
+.news-modal-title {
+  color: #004990;
+  font-weight: bold;
+}
+
 .election-box-info {
   margin-left: auto;
   margin-right: auto;
@@ -426,12 +450,24 @@ div#preload {
   background-color: rgba(0, 76, 148, 0.75);
 }
 
+.news-section {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
 .background-elections {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
   background-image: url("../img/background-1.jpg") !important;
+}
+
+.background-news {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-image: url("../img/background-news.jpg") !important; 
 }
 
 .past-election-1 {
