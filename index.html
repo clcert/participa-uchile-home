@@ -26,6 +26,52 @@
     })();
   </script>
   <!-- End Matomo Code -->
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+      // Functions to open and close a modal
+      function openModal($el) {
+        $el.classList.add('is-active');
+      }
+
+      function closeModal($el) {
+        $el.classList.remove('is-active');
+      }
+
+      function closeAllModals() {
+        (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+          closeModal($modal);
+        });
+      }
+
+      // Add a click event on buttons to open a specific modal
+      (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+        const modal = $trigger.dataset.target;
+        const $target = document.getElementById(modal);
+
+        $trigger.addEventListener('click', () => {
+          openModal($target);
+        });
+      });
+
+      // Add a click event on various child elements to close the parent modal
+      (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+        const $target = $close.closest('.modal');
+
+        $close.addEventListener('click', () => {
+          closeModal($target);
+        });
+      });
+
+      // Add a keyboard event to close all modals
+      document.addEventListener('keydown', (event) => {
+        const e = event || window.event;
+
+        if (e.keyCode === 27) { // Escape key
+          closeAllModals();
+        }
+      });
+    });
+  </script>
 </head>
 <body class="has-navbar background-elections">
   <div id="">
@@ -88,10 +134,38 @@
 
     <button onclick="topFunction()" id="top-button" title="Ir al Inicio">▲</button>    
 
-    <section class="section top-section pt-3 is-hidden-touch">
+    <section class="section demo-election-section pt-3 pb-0">
+      <div class="container is-flex is-justify-content-right">
+        <button class="button demo-election-button js-modal-trigger" data-target="modal-js-demo-election">
+        ¡Prueba nuestro sistema!
+        </button>  
+      </div>
+    </section>
+
+    <div id="modal-js-demo-election" class="modal demo-election-modal">
+      <div class="modal-background"></div>
+        <div class="modal-content">
+          <section class="modal-card-body">
+            <div class="is-flex is-align-items-center">
+            <figure class="image px-4" style="width: 150px">
+                <img src="assets/img/logoUchilemorado.png" />
+            </figure>
+            <p class="has-text-weight-bold has-text-centered pr-4">Los únicos requisitos para acceder a la prueba es pertenecer a la comunidad de la Universidad de Chile y tener una "Mi Cuenta Uchile" habilitada. Para más información de la cuenta <a href="http://pasaporte.uchile.cl/" target="_blank">ingresa aquí.</a></p>
+            </div>
+            <a href="https://participauchile.cl/vota/app/e/eleccion-ejemplo/vote" target="_blank">
+              <button class="mt-4 button election-button is-outlined">
+                  <span class="has-text-white">HAZ CLICK AQUÍ PARA VOTAR EN ELECCIÓN DE PRUEBA</span>
+              </button>
+            </a>
+          </section>
+        </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <section class="section top-section pt-0 is-hidden-touch">
       <div class="container">
         <div class="columns">
-          <div class="column is-flex pb-0">
+          <div class="column is-flex py-0">
             <img src="assets/svg/dibujo_1.svg" />
           </div>
           <div class="column is-align-self-center">
@@ -174,6 +248,9 @@
       allowfullscreen
       ></iframe>
     </figure>
+    <button class="button election-button is-outlined mt-5 js-modal-trigger" data-target="modal-js-demo-election">
+      <span class="has-text-white">¡Prueba nuestro sistema!</span>
+    </button>
   </div>
 </section>
 <div id="second-background">
