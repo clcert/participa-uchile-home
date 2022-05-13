@@ -310,7 +310,7 @@ div#preload {
 
 .demo-election-section {
   background-color: white;
-  padding-top: 2rem !important;
+  padding-top: 0.5rem !important;
 }
 
 .demo-election-button {
@@ -324,6 +324,19 @@ div#preload {
   font-weight: bold;
   margin-right: 3rem;
 }
+
+@media screen and (max-width: 768px) {
+  .demo-election-button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+  }
+  .demo-election-section {
+    padding-top: 0 !important;
+  }
+}
+
+
 
 .top-section {
   background-color: white;
