@@ -77,7 +77,7 @@
   <div id="">
     <div class="navbar-div">
       <div class="container">
-        <nav class="navbar custom-navbar pt-2 pl-0" role="navigation" aria-label="main navigation">
+        <nav class="navbar custom-navbar pt-2 pl-0 pr-0" role="navigation" aria-label="main navigation">
           <div class="navbar-brand is-justify-content-center is-align-items-center">
             <a class="navbar-item is-hidden-desktop pr-0 pl-2 mr-4 ml-4" href="https://participa.uchile.cl">
               <img src="assets/svg/logo.svg" width="300" />
@@ -108,20 +108,20 @@
                   <li class="nav__item">
                       <a href="#faq" title="" class="nav__link">FAQ</a>
                   </li>
-                  <li class="nav__item">
+                  <li class="nav__item pr-1">
                       <a href="#equipo" title="" class="nav__link">EQUIPO</a>
                   </li>
-                  <li class="nav__item pr-0">
+                  <li class="nav__item pr-0 pt-1">
                       <a target="_blank" href="https://www.twitter.com/participaUChile" title="" class="nav__social">
                         <span class="icon">
-                          <i class="fab fa-twitter"></i>
+                          <i class="fab fa-twitter" style="font-size: 1.5rem"></i>
                         </span>
                       </a>
                   </li>
-                  <li class="nav__item pr-0">
+                  <li class="nav__item pr-0 pt-1">
                       <a target="_blank" href="mailto:participa@uchile.cl" title="" class="nav__social">
                         <span class="icon">
-                          <i class="far fa-envelope"></i>
+                          <i class="fas fa-envelope" style="font-size: 1.5rem"></i>
                         </span>
                       </a>
                   </li>
@@ -165,7 +165,7 @@
     <section class="section top-section pt-0 is-hidden-touch">
       <div class="container">
         <div class="columns">
-          <div class="column is-flex py-0">
+          <div class="column is-flex py-0 is-justify-content-right">
             <img src="assets/svg/dibujo_1.svg" />
           </div>
           <div class="column is-align-self-center">
@@ -200,7 +200,7 @@
                     <p class="election-info mb-2 mx-2">
                       <span class="has-text-weight-bold current-election-title">ELECCIÓN EN CURSO</span>
                     </p>
-                    <figure class="image my-5 banner-image p-4 current-election-figure">
+<!--                     <figure class="image my-5 banner-image p-4 current-election-figure">
                       <img src="assets/img/logo_inap.svg">
                     </figure>
                     <h1 id="current-election-title-down" class="has-text-weight-bold pt-2 pb-4">ELECCIÓN DIRECTOR(A) INSTITUTO DE ASUNTOS PÚBLICOS</h1>
@@ -214,7 +214,8 @@
                         </button>
                       </a>
                       <h1 id="election-status-1" class="has-text-weight-bold pt-2">⚠ ELECCIÓN CERRADA</h1>
-                    </div>
+                    </div> -->
+                    <h1 id="current-election-title-down" class="has-text-weight-bold pt-2 pb-4">NINGUNA ELECCIÓN EN CURSO</h1>
                   </div>
                 </div>
               </div>
@@ -261,7 +262,7 @@
       <div class="message-header">
         <p>1. ¿Cómo se autentican los usuarios?</p>
       </div>
-      <div class="message-body">
+      <div class="message-body has-text-black">
         Todos los votantes de Participa UChile deben contar con una cuenta UChile (cuenta Pasaporte o mi.uchile) puesto que es la única manera de autenticarse en el sistema.
       </div>
     </article>
@@ -271,7 +272,7 @@
           2. ¿En qué elecciones se utiliza el sistema Participa UChile?
         </p>
       </div>
-      <div class="message-body">
+      <div class="message-body has-text-black">
         Participa UChile está orientado a elecciones de <span class="has-text-weight-bold">bajo perfil en un contexto universitario</span>, como por ejemplo, elecciones de directores de unidades académicas, consejeros, representantes de funcionarios y elecciones estudiantiles locales.
 
         Cuando la elección es de alto perfil, como por ejemplo, elecciones de cargos públicos de nivel nacional (presidente y representantes, etc.), la votación electrónica remota es aún un desafío con muchas interrogantes y riesgos significativos. La <a href="https://www.nationalacademies.org/our-work/the-future-of-voting-accessible-reliable-verifiable-technology" target="_blank">recomendación de la comunidad experta internacional</a> para dicho contexto es no utilizar votación remota pues no se conoce un sistema hoy en día que garantice seguridad a un nivel adecuado. Participa UChile no es la excepción.
@@ -281,7 +282,7 @@
       <div class="message-header">
         <p>3. ¿Qué seguridad provee Participa UChile?</p>
       </div>
-      <div class="message-body">
+      <div class="message-body has-text-black">
         Participa UChile es una adaptación del sistema <a href="https://www.usenix.org/legacy/event/sec08/tech/full_papers/adida/adida.pdf" target="_blank">Helios Voting, propuesto por Ben Adida (2008)</a>. Helios ha sido utilizado por entidades como la International Association for Cryptographic Research, y la U. de Louvain-Le Neuve (Bélgica). 
 
         Participa UChile, tal como Helios, utiliza <span class="has-text-weight-bold">algoritmos matemáticos para mejorar la seguridad del sistema</span>. El sistema permite, por ejemplo, garantizar el secreto del voto encriptando los votos con una clave secreta dividida entre varios custodios. De hecho, el sistema nunca revela (desencripta) algún voto individual sino sólo el resultado final, para lo cual se requiere la cooperación activa de los custodios. Adicionalmente, cualquier persona, sea un participante en la elección o un mero observador pasivo, puede auditar la elección, esto es, verificar matemáticamente que el resultado es consistente con los votos encriptados emitidos. 
@@ -291,7 +292,7 @@
       <div class="message-header">
         <p>4. ¿En qué se diferencia Participa UChile de un sistema de votación cerrado?</p>
       </div>
-      <div class="message-body">
+      <div class="message-body has-text-black">
         Los algoritmos criptográficos del sistema Participa UChile permiten evidenciar intentos externos o internos de manipulación de votos o del total. Otros sistemas cerrados son opacos y sólo entregan el resultado sin mayor explicación. En ellos, tanto el secreto de un voto individual como la integridad del resultado final depende exclusivamente del administrador del sistema informático. Los votantes y la comunidad deben depositar su confianza en el accionar correcto del administrador, sin posibilidad de confirmar si la confianza es merecida o no. Si bien Participa UChile no elimina completamente dicha confianza, la minimiza significativamente, dándole herramientas al votante para confirmar si es merecida o no.
       </div>
     </article>
@@ -299,7 +300,7 @@
       <div class="message-header">
         <p>5. ¿Cómo puedo verificar que mi voto ha sido recibido por Participa UChile?</p>
       </div>
-      <div class="message-body">
+      <div class="message-body has-text-black">
        Cada votante, al concluir la selección de sus preferencias y enviar la papeleta con su voto encriptado, recibe un código serial identificador de la papeleta. Este código no revela su voto ni permite revelarlo a un tercero, pero sí permite identificar la papeleta encriptada dentro de la lista de papeletas encriptadas recibidas por el servidor. 
      </div>
    </article>
@@ -307,7 +308,7 @@
     <div class="message-header">
       <p>6. ¡El sistema permite votar más de una vez! ¿Es un error o falla?</p>
     </div>
-    <div class="message-body">
+    <div class="message-body has-text-black">
      El sistema permite que, cualquier votante, luego de haber votado pueda ingresar nuevamente y reiniciar el proceso de votación, emitiendo un nuevo voto que reemplaza al voto anterior. El sistema nunca almacena más de un voto por votante. Si bien para un votante puede parecer que emite un "segundo voto", eso no es efectivo, pues efectivamente está reemplazando su voto. En particular, no puede darse el caso que un mismo votante tenga dos votos o más, siempre tendrá a lo más un voto. Esta funcionalidad es intencional y, si bien no existe en un sistema de votación de “lápiz y papel”, es posible de implementar de forma segura en un sistema electrónico. Es una medida estándar de mitigación parcial contra el problema de la coerción. Si bien no es perfecta, es simple de implementar y en entornos de baja coerción se considera razonablemente efectiva. Para la tranquilidad de todas y todos, podemos aclarar que no es una característica errónea o en necesidad de arreglo, pues no viola la unicidad del voto.
    </div>
  </article>
@@ -315,7 +316,7 @@
     <div class="message-header">
       <p>7. ¿participa.uchile.cl ó participauchile.cl? ¿Cuál es la dirección web correcta?</p>
     </div>
-    <div class="message-body">
+    <div class="message-body has-text-black">
      Ambas direcciones web son válidas para acceder a las votaciones y consultas realizadas por Participa UChile. 
    </div>
  </article>
