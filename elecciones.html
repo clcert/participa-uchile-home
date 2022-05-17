@@ -23,73 +23,147 @@
     })();
   </script>
   <!-- End Matomo Code -->
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+      // Functions to open and close a modal
+      function openModal($el) {
+        $el.classList.add('is-active');
+      }
+
+      function closeModal($el) {
+        $el.classList.remove('is-active');
+      }
+
+      function closeAllModals() {
+        (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+          closeModal($modal);
+        });
+      }
+
+      // Add a click event on buttons to open a specific modal
+      (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+        const modal = $trigger.dataset.target;
+        const $target = document.getElementById(modal);
+
+        $trigger.addEventListener('click', () => {
+          openModal($target);
+        });
+      });
+
+      // Add a click event on various child elements to close the parent modal
+      (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+        const $target = $close.closest('.modal');
+
+        $close.addEventListener('click', () => {
+          closeModal($target);
+        });
+      });
+
+      // Add a keyboard event to close all modals
+      document.addEventListener('keydown', (event) => {
+        const e = event || window.event;
+
+        if (e.keyCode === 27) { // Escape key
+          closeAllModals();
+        }
+      });
+    });
+  </script>  
 </head>
 <body class="has-navbar background-elections">
-  
-    <div class="navbar-div">
-      <div class="container">
-        <nav class="navbar custom-navbar pt-2 pl-0" role="navigation" aria-label="main navigation">
-          <div class="navbar-brand is-justify-content-center is-align-items-center">
-            <a class="navbar-item is-hidden-desktop pr-0 pl-2 mr-4 ml-4" href="https://participa.uchile.cl">
-              <img src="assets/svg/logo.svg" width="300" />
-            </a>
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="$('.navbar-burger').toggleClass('is-active'); $('.navbar-menu').toggleClass('is-active');">
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-            </a>
-          </div>
 
-          <div id="navbarBasicExample" class="navbar-menu ml-6">
-            <div class="navbar-end">
-              <ul class="nav__list">
-                <li class="nav__item">
-                  <a href="/" title="" class="nav__link">HOME</a>
-                </li>
-                <li class="nav__item">
-                      <a href="elecciones.html" title="" class="nav__link">ELECCIONES</a>
-                </li>
-                <li class="nav__item">
-                      <a href="noticias.html" title="" class="nav__link">NOTICIAS</a>
-                </li>
-                <li class="nav__item pr-0">
-                  <a target="_blank" href="https://www.twitter.com/participaUChile" title="" class="nav__social">
-                    <span class="icon">
-                      <i class="fab fa-twitter"></i>
-                    </span>
-                  </a>
-                </li>
-                <li class="nav__item pr-0">
-                  <a target="_blank" href="mailto:participa@uchile.cl" title="" class="nav__social">
-                    <span class="icon">
-                      <i class="far fa-envelope"></i>
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+  <div class="navbar-div">
+    <div class="container">
+      <nav class="navbar custom-navbar pt-2 pl-0 pr-0" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand is-justify-content-center is-align-items-center">
+          <a class="navbar-item is-hidden-desktop pr-0 pl-2 mr-4 ml-4" href="https://participa.uchile.cl">
+            <img src="assets/svg/logo.svg" width="300" />
+          </a>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="$('.navbar-burger').toggleClass('is-active'); $('.navbar-menu').toggleClass('is-active');">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu ml-6">
+          <div class="navbar-end">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="/" title="" class="nav__link">HOME</a>
+              </li>
+              <li class="nav__item">
+                <a href="elecciones.html" title="" class="nav__link">ELECCIONES</a>
+              </li>
+              <li class="nav__item pr-1">
+                <a href="noticias.html" title="" class="nav__link">NOTICIAS</a>
+              </li>
+              <li class="nav__item pr-0 pt-1">
+                <a target="_blank" href="https://www.twitter.com/participaUChile" title="" class="nav__social">
+                  <span class="icon">
+                    <i class="fab fa-twitter" style="font-size: 1.5rem"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="nav__item pr-0 pt-1">
+                <a target="_blank" href="mailto:participa@uchile.cl" title="" class="nav__social">
+                  <span class="icon">
+                    <i class="fas fa-envelope" style="font-size: 1.5rem"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
           </div>
-        </nav>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <button onclick="topFunction()" id="top-button" title="Ir al Inicio">▲</button>    
+
+  <section class="section demo-election-section pb-0">
+      <div class="container is-flex is-justify-content-right">
+        <button class="button demo-election-button js-modal-trigger" data-target="modal-js-demo-election">
+        ¡Prueba nuestro sistema!
+        </button>  
       </div>
+    </section>
+
+    <div id="modal-js-demo-election" class="modal demo-election-modal">
+      <div class="modal-background"></div>
+        <div class="modal-content">
+          <section class="modal-card-body">
+            <div class="is-flex is-align-items-center">
+            <figure class="image px-4" style="width: 150px">
+                <img src="assets/img/logoUchilemorado.png" />
+            </figure>
+            <p class="has-text-weight-bold has-text-centered pr-4">Los únicos requisitos para acceder a la prueba es pertenecer a la comunidad de la Universidad de Chile y tener una "Mi Cuenta Uchile" habilitada. Para más información de la cuenta <a href="http://pasaporte.uchile.cl/" target="_blank">ingresa aquí.</a></p>
+            </div>
+            <a href="https://participauchile.cl/vota/app/e/eleccion-de-prueba/vote" target="_blank">
+              <button class="mt-4 button election-button is-outlined">
+                  <span class="has-text-white">HAZ CLICK AQUÍ PARA VOTAR EN ELECCIÓN DE PRUEBA</span>
+              </button>
+            </a>
+          </section>
+        </div>
+      <button class="modal-close is-large" aria-label="close"></button>
     </div>
 
-    <button onclick="topFunction()" id="top-button" title="Ir al Inicio">▲</button>    
-
-    <section class="section top-section pt-3 is-hidden-touch">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-flex pb-0">
-            <img src="assets/svg/dibujo_1.svg" />
-          </div>
-          <div class="column is-align-self-center">
-            <p class="has-text-weight-bold text-title">
-              <span class="big-text-title">LISTADO DE VOTACIONES
+  <section class="section top-section pt-3 is-hidden-touch">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-flex pb-0">
+          <img src="assets/svg/dibujo_1.svg" />
+        </div>
+        <div class="column is-align-self-center">
+          <p class="has-text-weight-bold text-title">
+            <span class="big-text-title">LISTADO DE VOTACIONES
               <br/>Y CONSULTAS</span>
             </p>
           </div>
           <div class="column is-align-self-center">
             <figure class="image">
-              <img src="assets/svg/logo.svg" />
+              <img src="assets/svg/logo-con-escudo.svg" />
             </figure>
           </div>
         </div>
@@ -101,196 +175,196 @@
 
         <div class="past-elections-box pb-2">
 
-        <p class="election-info mb-2 mx-2">
-          <span class="has-text-weight-bold current-election-title">ELECCIONES REALIZADAS</span>
-        </p>
-        <ul>
-          <li>
-            <div class="box past-election-1 py-4 mb-3"> 
-              <span>FECHA: 05 de mayo de 2022</span>
-              <br/>
-              <span>INSTITUTO: Instituto de Asuntos Públicos (INAP)</span>
-              <br/><br/>
-              <span>ELECCIÓN:</span>
-              <ul><li>▪ Director(a) de Instituto</li></ul>
-            </p>
-          </li>
-          <li>
-            <div class="box past-election-2 py-4 mb-3"> 
-              <span>FECHA: 08 de abril de 2022</span>
-              <br/>
-              <span>UNIDAD: Departamento de Evaluación, Medición y Registro Educacional (DEMRE)</span>
-              <br/><br/>
-              <span>ELECCIÓN:</span>
-              <ul><li>▪ Comité Paritario de Higiene y Seguridad DEMRE</li></ul>
-            </p>
-          </li>
-          <li>
-            <div class="box past-election-1 py-4 mb-3"> 
-              <span>FECHA: 14 de diciembre de 2021</span>
-              <br/>
-              <span>FACULTAD: Facultad de Ciencias Físicas y Matemáticas</span>
-              <br/><br/>
-              <span>ELECCIÓN:</span>
-              <ul><li>▪ Representantes Académicos(as) al Consejo del Departamento de Ingeniería Industrial</li></ul>
-            </p>
-          </li>
-          <li>
-            <div class="box past-election-2 py-4 mb-3">
-              <span>FECHA: 03 de diciembre de 2021</span>
-              <br/>
-              <span>FACULTAD: Facultad de Economía y Negocios</span>
-              <br/><br/>
-              <span>ELECCIÓN:</span>
-              <ul><li>▪ Director(a) de Departamento de Economía</li></ul>
-            </div>
-          </li>
-          <li>
-            <div class="box past-election-1 py-4 mb-3">
-              <span>FECHA: 17 de noviembre de 2021</span>
-              <br/>
-              <span>INSTITUTO: Instituto de Estudios Internacionales</span>
-              <br/><br/>
-              <span>ELECCIÓN:</span>
-              <ul><li>▪ Representantes Académicos(as) al Consejo de Instituto</li></ul>
-            </div>
-          </li>
-          <li>
-            <div class="box past-election-2 py-4 mb-3">
-              <span>FECHA: 11 de noviembre de 2021</span>
-              <br/>
-              <span>ASOCIACIÓN: Asociación de Funcionarios Servicios Centrales</span>
-              <br/><br/>
-              <span>ELECCIÓN:</span>
-              <ul><li>▪ Directiva AFUCh Servicios Centrales</li></ul>
-            </div>
-          </li>
-          <li>
-            <div class="box past-election-1 py-4 mb-3">
-              <span>FECHA: 09 de noviembre de 2021</span>
-              <br/>
-              <span>FACULTAD: Facultad de Ciencias Químicas y Farmacéuticas</span>
-              <br/><br/>
-              <span>ELECCIONES:</span>
-              <ul>
-                <li>▪ Director(a) de Departamento de Ciencias y Tecnología Farmacéutica</li>
-                <li>▪ Representantes Académicos(as) al Consejo del Departamento de Ciencias y Tecnología Farmacéutica</li>
-                <li>▪ Director(a) de Departamento de Química Farmacológica y Toxicológica</li>
-                <li>▪ Representantes Académicos(as) al Consejo del Departamento de Química Farmacológica y Toxicológica</li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="box past-election-2 py-4 mb-3">
-              <span>FECHA: 09 de noviembre de 2021</span>
-              <br/>
-              <span>FACULTAD: Facultad de Ciencias</span>
-              <br/><br/>
-              <span>ELECCIÓN:</span>
-              <ul><li>▪ Representantes Estudiantiles al Consejo de Escuela de Postgrado</li></ul>
-            </div>
-          </li>
-          <li>
-            <div class="box past-election-1 py-4 mb-3">
-              <span>FECHA: 02 de noviembre de 2021</span>
-              <br/>
-              <span>FACULTAD: Facultad de Arquitectura y Urbanismo</span>
-              <br/><br/>
-              <span>ELECCIÓN:</span>
-              <ul><li>▪ Director(a) de Departamento de Diseño</li></ul>
-            </div>
-          </li>
-          <li>
-            <div class="box past-election-2 py-4 mb-3">
-              <span>FECHA: 20 de octubre de 2021</span>
-              <br/>
-              <span>INSTITUTO: Instituto de Estudios Avanzados en Educación</span>
-              <br/><br/>
-              <span>ELECCIONES:</span>
-              <ul>
-                <li>▪ Representantes Académicos(as) al Consejo de Instituto</li>
-                <li>▪ Representantes Académicos(as) al Consejo de Escuela de Postgrado</li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="box past-election-1 py-4 mb-3">
-              <span>FECHA: 05 de octubre de 2021</span>
-              <br/>
-              <span>FACULTAD: Facultad de Ciencias Veterinarias y Pecuarias</span>
-              <br/><br/>
-              <span>ELECCIONES:</span>
-              <ul>
-                <li>▪ Director(a) de Departamento de Ciencias Biológicas Animales</li>
-                <li>▪ Director(a) de Departamento de Ciencias Clínicas</li>
-                <li>▪ Director(a) de Departamento de Fomento de la Producción Animal</li>
-                <li>▪ Director(a) de Departamento de Medicina Preventiva Animal</li>
-                <li>▪ Director(a) de Departamento de Patología Animal</li>
-                <li>▪ Representantes Académicos(as) al Consejo de Facultad</li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="box past-election-2 py-4 mb-3">
-              <span>FECHA: 27 de septiembre de 2021</span>
-              <br/>
-              <span>INSTITUTO: Instituto de Asuntos Públicos</span>
-              <br/><br/>
-              <span>ELECCIÓN:</span>
-              <ul><li>▪ Representantes Académicos(as) al Consejo de Instituto</li></ul>
-            </div>
-          </li>
-          <li>
-            <div class="box past-election-1 py-4 mb-3">
-              <span>FECHA: 27 de agosto de 2021</span>
-              <br/>
-              <span>FACULTAD: Facultad de Economía y Negocios</span>
-              <br/><br/>
-              <span>ELECCIÓN:</span>
-              <ul><li>▪ Director(a) de Departamento de Control de Gestión y Sistemas de Información</li></ul>
-            </div>
-          </li>
-          <li>
-            <div class="box past-election-2 py-4 mb-3">
-              <span>FECHA: 25 de agosto de 2021</span>
-              <br/>
-              <span>FACULTAD: Facultad de Ciencias Físicas y Matemáticas</span>
-              <br/><br/>
-              <span>ELECCIONES:</span>
-              <ul>
-                <li>▪ Director(a) de Departamento de Ingeniería Industrial</li>
-                <li>▪ Representantes Académicos(as) al Consejo de Departamento de Ingeniería Industrial</li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="box past-election-1 py-4 mb-3">
-              <span>FECHA: 26 de juio de 2021</span>
-              <br/>
-              <span>FACULTAD: Facultad de Ciencias Sociales</span>
-              <br/><br/>
-              <span>ELECCIÓN:</span>
-              <ul>
-                <li>▪ Director(a) de Departamento de Trabajo Social</li>
-                <li>▪ Representantes Académicos(as) al Consejo de Departamento de Trabajo Social</li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="box past-election-2 py-4 mb-3">
-              <span>FECHA: 14 de julio de 2021</span>
-              <br/>
-              <span>INSTITUTO: Instituto de Estudios Internacionales</span>
-              <br/><br/>
-              <span>ELECCIONES:</span>
-              <ul>
-                <li>▪ Director(a) de Unidad Académica de Relaciones Jurídicas y Económicas Internacionales</li>
-                <li>▪ Director(a) de Unidad Académica de Relaciones Internacionales y Políticas Públicas</li>
-                <li>▪ Representantes Académicos(as) al Consejo de Instituto</li>
-              </ul>
-            </div>
-          </li>
-        </ul>
+          <p class="election-info mb-2 mx-2">
+            <span class="has-text-weight-bold current-election-title">ELECCIONES REALIZADAS</span>
+          </p>
+          <ul>
+            <li>
+              <div class="box past-election-1 py-4 mb-3"> 
+                <span>FECHA: 05 de mayo de 2022</span>
+                <br/>
+                <span>INSTITUTO: Instituto de Asuntos Públicos (INAP)</span>
+                <br/><br/>
+                <span>ELECCIÓN:</span>
+                <ul><li>▪ Director(a) de Instituto</li></ul>
+              </p>
+            </li>
+            <li>
+              <div class="box past-election-2 py-4 mb-3"> 
+                <span>FECHA: 08 de abril de 2022</span>
+                <br/>
+                <span>UNIDAD: Departamento de Evaluación, Medición y Registro Educacional (DEMRE)</span>
+                <br/><br/>
+                <span>ELECCIÓN:</span>
+                <ul><li>▪ Comité Paritario de Higiene y Seguridad DEMRE</li></ul>
+              </p>
+            </li>
+            <li>
+              <div class="box past-election-1 py-4 mb-3"> 
+                <span>FECHA: 14 de diciembre de 2021</span>
+                <br/>
+                <span>FACULTAD: Facultad de Ciencias Físicas y Matemáticas</span>
+                <br/><br/>
+                <span>ELECCIÓN:</span>
+                <ul><li>▪ Representantes Académicos(as) al Consejo del Departamento de Ingeniería Industrial</li></ul>
+              </p>
+            </li>
+            <li>
+              <div class="box past-election-2 py-4 mb-3">
+                <span>FECHA: 03 de diciembre de 2021</span>
+                <br/>
+                <span>FACULTAD: Facultad de Economía y Negocios</span>
+                <br/><br/>
+                <span>ELECCIÓN:</span>
+                <ul><li>▪ Director(a) de Departamento de Economía</li></ul>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-1 py-4 mb-3">
+                <span>FECHA: 17 de noviembre de 2021</span>
+                <br/>
+                <span>INSTITUTO: Instituto de Estudios Internacionales</span>
+                <br/><br/>
+                <span>ELECCIÓN:</span>
+                <ul><li>▪ Representantes Académicos(as) al Consejo de Instituto</li></ul>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-2 py-4 mb-3">
+                <span>FECHA: 11 de noviembre de 2021</span>
+                <br/>
+                <span>ASOCIACIÓN: Asociación de Funcionarios Servicios Centrales</span>
+                <br/><br/>
+                <span>ELECCIÓN:</span>
+                <ul><li>▪ Directiva AFUCh Servicios Centrales</li></ul>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-1 py-4 mb-3">
+                <span>FECHA: 09 de noviembre de 2021</span>
+                <br/>
+                <span>FACULTAD: Facultad de Ciencias Químicas y Farmacéuticas</span>
+                <br/><br/>
+                <span>ELECCIONES:</span>
+                <ul>
+                  <li>▪ Director(a) de Departamento de Ciencias y Tecnología Farmacéutica</li>
+                  <li>▪ Representantes Académicos(as) al Consejo del Departamento de Ciencias y Tecnología Farmacéutica</li>
+                  <li>▪ Director(a) de Departamento de Química Farmacológica y Toxicológica</li>
+                  <li>▪ Representantes Académicos(as) al Consejo del Departamento de Química Farmacológica y Toxicológica</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-2 py-4 mb-3">
+                <span>FECHA: 09 de noviembre de 2021</span>
+                <br/>
+                <span>FACULTAD: Facultad de Ciencias</span>
+                <br/><br/>
+                <span>ELECCIÓN:</span>
+                <ul><li>▪ Representantes Estudiantiles al Consejo de Escuela de Postgrado</li></ul>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-1 py-4 mb-3">
+                <span>FECHA: 02 de noviembre de 2021</span>
+                <br/>
+                <span>FACULTAD: Facultad de Arquitectura y Urbanismo</span>
+                <br/><br/>
+                <span>ELECCIÓN:</span>
+                <ul><li>▪ Director(a) de Departamento de Diseño</li></ul>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-2 py-4 mb-3">
+                <span>FECHA: 20 de octubre de 2021</span>
+                <br/>
+                <span>INSTITUTO: Instituto de Estudios Avanzados en Educación</span>
+                <br/><br/>
+                <span>ELECCIONES:</span>
+                <ul>
+                  <li>▪ Representantes Académicos(as) al Consejo de Instituto</li>
+                  <li>▪ Representantes Académicos(as) al Consejo de Escuela de Postgrado</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-1 py-4 mb-3">
+                <span>FECHA: 05 de octubre de 2021</span>
+                <br/>
+                <span>FACULTAD: Facultad de Ciencias Veterinarias y Pecuarias</span>
+                <br/><br/>
+                <span>ELECCIONES:</span>
+                <ul>
+                  <li>▪ Director(a) de Departamento de Ciencias Biológicas Animales</li>
+                  <li>▪ Director(a) de Departamento de Ciencias Clínicas</li>
+                  <li>▪ Director(a) de Departamento de Fomento de la Producción Animal</li>
+                  <li>▪ Director(a) de Departamento de Medicina Preventiva Animal</li>
+                  <li>▪ Director(a) de Departamento de Patología Animal</li>
+                  <li>▪ Representantes Académicos(as) al Consejo de Facultad</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-2 py-4 mb-3">
+                <span>FECHA: 27 de septiembre de 2021</span>
+                <br/>
+                <span>INSTITUTO: Instituto de Asuntos Públicos</span>
+                <br/><br/>
+                <span>ELECCIÓN:</span>
+                <ul><li>▪ Representantes Académicos(as) al Consejo de Instituto</li></ul>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-1 py-4 mb-3">
+                <span>FECHA: 27 de agosto de 2021</span>
+                <br/>
+                <span>FACULTAD: Facultad de Economía y Negocios</span>
+                <br/><br/>
+                <span>ELECCIÓN:</span>
+                <ul><li>▪ Director(a) de Departamento de Control de Gestión y Sistemas de Información</li></ul>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-2 py-4 mb-3">
+                <span>FECHA: 25 de agosto de 2021</span>
+                <br/>
+                <span>FACULTAD: Facultad de Ciencias Físicas y Matemáticas</span>
+                <br/><br/>
+                <span>ELECCIONES:</span>
+                <ul>
+                  <li>▪ Director(a) de Departamento de Ingeniería Industrial</li>
+                  <li>▪ Representantes Académicos(as) al Consejo de Departamento de Ingeniería Industrial</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-1 py-4 mb-3">
+                <span>FECHA: 26 de juio de 2021</span>
+                <br/>
+                <span>FACULTAD: Facultad de Ciencias Sociales</span>
+                <br/><br/>
+                <span>ELECCIÓN:</span>
+                <ul>
+                  <li>▪ Director(a) de Departamento de Trabajo Social</li>
+                  <li>▪ Representantes Académicos(as) al Consejo de Departamento de Trabajo Social</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="box past-election-2 py-4 mb-3">
+                <span>FECHA: 14 de julio de 2021</span>
+                <br/>
+                <span>INSTITUTO: Instituto de Estudios Internacionales</span>
+                <br/><br/>
+                <span>ELECCIONES:</span>
+                <ul>
+                  <li>▪ Director(a) de Unidad Académica de Relaciones Jurídicas y Económicas Internacionales</li>
+                  <li>▪ Director(a) de Unidad Académica de Relaciones Internacionales y Políticas Públicas</li>
+                  <li>▪ Representantes Académicos(as) al Consejo de Instituto</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
           
         </div>
       </div>
@@ -310,6 +384,6 @@
     <section class="hero">
       <div class="hero-body bottom-hero py-4" style="background-color: transparent;"></div>
     </section>
-  
-</body>
-</html>
+
+  </body>
+  </html>
