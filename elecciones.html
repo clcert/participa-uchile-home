@@ -149,15 +149,15 @@
       <button class="modal-close is-large" aria-label="close"></button>
     </div>
 
-  <section class="section top-section pt-3 is-hidden-touch">
+  <section class="section top-section pt-0 is-hidden-touch">
     <div class="container">
       <div class="columns">
-        <div class="column is-flex pb-0">
+        <div class="column is-flex py-0 is-justify-content-right">
           <img src="assets/svg/dibujo_1.svg" />
         </div>
-        <div class="column is-align-self-center">
-          <p class="has-text-weight-bold text-title">
-            <span class="big-text-title">LISTADO DE VOTACIONES
+        <div class="column is-align-self-center pr-0">
+          <p class="has-text-weight-bold text-title pr-0">
+            <span class="big-text-title" style="font-size: 1.5rem">LISTADO DE VOTACIONES
               <br/>Y CONSULTAS</span>
             </p>
           </div>
@@ -175,9 +175,15 @@
 
         <div class="past-elections-box pb-2">
 
-          <p class="election-info mb-2 mx-2">
-            <span class="has-text-weight-bold current-election-title">ELECCIONES REALIZADAS</span>
-          </p>
+          <div class="election-info mb-2 mx-2">
+            <div class="is-flex is-align-items-center">
+                      <span class="is-hidden-mobile mr-2 is-flex" style="width: 5%; margin-left: -50px;">
+                        <img src="assets/svg/sobre.svg">  
+                      </span>
+            <span class="has-text-weight-bold current-election-title" style="display: inline-block; width: 100%;">ELECCIONES REALIZADAS</span>
+            </div>
+          </div>
+
           <ul>
             <li>
               <div class="box past-election-1 py-4 mb-3"> 
@@ -386,4 +392,25 @@
     </section>
 
   </body>
+  <script type="text/javascript">
+      //Get the button:
+      mybutton = document.getElementById("top-button");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      } 
+  </script>
   </html>

@@ -507,11 +507,25 @@ div#preload {
 .past-election-1 {
   font-size: 1.2rem;
   border: 3px solid #004b93 !important;
+  margin-left: 20px;
 }
 
 .past-election-2 {
   font-size: 1.2rem;
   border: 3px solid #6dcaf3 !important;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .past-election-1 {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .past-election-2 {
+    margin-left: 0;
+  }
 }
 
 .past-election-button-container {
