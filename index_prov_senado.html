@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Participa UChile</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/booth.css" />
+  <link rel="shortcut icon" type="image/png" href="favicon.ico" />
+  <script
+  src="https://kit.fontawesome.com/9542c9df50.js"
+  crossorigin="anonymous"
+  ></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+  <!-- Matomo -->
+  <script type="text/javascript">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//analytics.labs.clcert.cl/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '1']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+      // Functions to open and close a modal
+      function openModal($el) {
+        $el.classList.add('is-active');
+      }
+
+      function closeModal($el) {
+        $el.classList.remove('is-active');
+      }
+
+      function closeAllModals() {
+        (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+          closeModal($modal);
+        });
+      }
+
+      // Add a click event on buttons to open a specific modal
+      (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+        const modal = $trigger.dataset.target;
+        const $target = document.getElementById(modal);
+
+        $trigger.addEventListener('click', () => {
+          openModal($target);
+        });
+      });
+
+      // Add a click event on various child elements to close the parent modal
+      (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+        const $target = $close.closest('.modal');
+
+        $close.addEventListener('click', () => {
+          closeModal($target);
+        });
+      });
+
+      // Add a keyboard event to close all modals
+      document.addEventListener('keydown', (event) => {
+        const e = event || window.event;
+
+        if (e.keyCode === 27) { // Escape key
+          closeAllModals();
+        }
+      });
+    });
+  </script>
+</head>
+<body class="has-navbar background-elections">
+  <div id="">
+    <div class="navbar-div">
+      <div class="container">
+        <nav class="navbar custom-navbar pt-2 pl-0 pr-0" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand is-justify-content-center is-align-items-center">
+            <a class="navbar-item is-hidden-desktop pr-0 pl-2 mr-4 ml-4" href="https://participa.uchile.cl">
+              <img src="assets/svg/logo.svg" width="300" />
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="$('.navbar-burger').toggleClass('is-active'); $('.navbar-menu').toggleClass('is-active');">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+
+          <div id="navbarBasicExample" class="navbar-menu ml-6">
+            <div class="navbar-end">
+                <ul class="nav__list">
+                  <li class="nav__item">
+                      <a href="#eleccion" title="" class="nav__link">EN CURSO</a>
+                  </li>
+                  <li class="nav__item">
+                      <a href="elecciones.html" title="" class="nav__link">ELECCIONES</a>
+                  </li>
+                  <li class="nav__item">
+                      <a href="noticias.html" title="" class="nav__link">NOTICIAS</a>
+                  </li>
+                  <li class="nav__item">
+                      <a href="#video" title="" class="nav__link">COMO VOTAR</a>
+                  </li>
+                  <li class="nav__item">
+                      <a href="#faq" title="" class="nav__link">FAQ</a>
+                  </li>
+                  <li class="nav__item pr-1">
+                      <a href="#equipo" title="" class="nav__link">EQUIPO</a>
+                  </li>
+                  <li class="nav__item pr-0 pt-1">
+                      <a target="_blank" href="https://www.twitter.com/participaUChile" title="" class="nav__social">
+                        <span class="icon">
+                          <i class="fab fa-twitter" style="font-size: 1.5rem"></i>
+                        </span>
+                      </a>
+                  </li>
+                  <li class="nav__item pr-0 pt-1">
+                      <a target="_blank" href="mailto:participa@uchile.cl" title="" class="nav__social">
+                        <span class="icon">
+                          <i class="fas fa-envelope" style="font-size: 1.5rem"></i>
+                        </span>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <button onclick="topFunction()" id="top-button" title="Ir al Inicio">▲</button>    
+
+    <section class="section demo-election-section pb-0">
+      <div class="container is-flex is-justify-content-right">
+        <button class="button demo-election-button js-modal-trigger" data-target="modal-js-demo-election">
+        ¡Prueba nuestro sistema!
+        </button>  
+      </div>
+    </section>
+
+    <div id="modal-js-demo-election" class="modal demo-election-modal">
+      <div class="modal-background"></div>
+        <div class="modal-content">
+          <section class="modal-card-body">
+            <div class="is-flex is-align-items-center">
+            <figure class="image px-4" style="width: 150px">
+                <img src="assets/img/logoUchilemorado.png" />
+            </figure>
+            <p class="has-text-weight-bold has-text-centered pr-4">Los únicos requisitos para acceder a la prueba es pertenecer a la comunidad de la Universidad de Chile y tener una "Mi Cuenta Uchile" habilitada. Para más información de la cuenta <a href="http://pasaporte.uchile.cl/" target="_blank">ingresa aquí.</a></p>
+            </div>
+            <a href="https://participauchile.cl/vota/app/e/eleccion-de-prueba/vote" target="_blank">
+              <button class="mt-4 button election-button is-outlined" onclick="$('.modal-background').click();">
+                  <span class="has-text-white">HAZ CLICK AQUÍ PARA VOTAR EN ELECCIÓN DE PRUEBA</span>
+              </button>
+            </a>
+          </section>
+        </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <div id="modal-js-senado-transv" class="modal demo-election-modal">
+      <div class="modal-background"></div>
+        <div class="modal-content">
+          <section class="modal-card-body">
+            
+          </section>
+        </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <div id="modal-js-senado-local" class="modal demo-election-modal">
+      <div class="modal-background"></div>
+        <div class="modal-content">
+          <section class="modal-card-body">
+            <div class="is-flex is-align-items-center">
+            <figure class="image px-4" style="width: 150px">
+                <img src="assets/img/logoUchilemorado.png" />
+            </figure>
+            <p class="has-text-weight-bold has-text-centered pr-4">Los únicos requisitos para acceder a la prueba es pertenecer a la comunidad de la Universidad de Chile y tener una "Mi Cuenta Uchile" habilitada. Para más información de la cuenta <a href="http://pasaporte.uchile.cl/" target="_blank">ingresa aquí.</a></p>
+            </div>
+            <a href="https://participauchile.cl/vota/app/e/eleccion-de-prueba/vote" target="_blank">
+              <button class="mt-4 button election-button is-outlined" onclick="$('.modal-background').click();">
+                  <span class="has-text-white">HAZ CLICK AQUÍ PARA VOTAR EN ELECCIÓN DE PRUEBA</span>
+              </button>
+            </a>
+          </section>
+        </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <div id="modal-js-senado-func" class="modal demo-election-modal">
+      <div class="modal-background"></div>
+        <div class="modal-content">
+          <section class="modal-card-body">
+            <div class="is-flex is-align-items-center">
+            <figure class="image px-4" style="width: 150px">
+                <img src="assets/img/logoUchilemorado.png" />
+            </figure>
+            <p class="has-text-weight-bold has-text-centered pr-4">Los únicos requisitos para acceder a la prueba es pertenecer a la comunidad de la Universidad de Chile y tener una "Mi Cuenta Uchile" habilitada. Para más información de la cuenta <a href="http://pasaporte.uchile.cl/" target="_blank">ingresa aquí.</a></p>
+            </div>
+            <a href="https://participauchile.cl/vota/app/e/eleccion-de-prueba/vote" target="_blank">
+              <button class="mt-4 button election-button is-outlined" onclick="$('.modal-background').click();">
+                  <span class="has-text-white">HAZ CLICK AQUÍ PARA VOTAR EN ELECCIÓN DE PRUEBA</span>
+              </button>
+            </a>
+          </section>
+        </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <section class="section top-section pt-0 is-hidden-touch">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-flex py-0 is-justify-content-right">
+            <img src="assets/svg/dibujo_1.svg" />
+          </div>
+          <div class="column is-align-self-center">
+            <p class="has-text-weight-bold text-title">
+              <span class="big-text-title">PÁGINA PRINCIPAL</span>
+              <br/>SISTEMA DE VOTACIÓN
+              <br/>Y CONSULTAS</p>
+            </div>
+            <div class="column is-align-self-center">
+
+              <figure class="image">
+                <img src="assets/svg/logo-con-escudo.svg" />
+              </figure>
+              <!-- <figure class="image is-1by3">
+                <img src="assets/svg/separador-logos.svg" />            
+              </figure> -->
+              <!-- <figure class="image is-64x64">
+                <img src="assets/svg/logo-uchile.svg" />
+              </figure> -->
+
+            </div>
+
+          </div>  
+        </section>
+        <div id="first-background">
+        <section class="section election-section" id="eleccion">
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <div class="election-box">
+                  <div class="election-box-info">
+                    
+                    <div class="election-info mb-2 mx-2 pt-5">
+                    <div class="is-flex is-align-items-center">
+                      <span class="is-hidden-mobile mr-2 is-flex" style="width: 5%; margin-left: -50px;">
+                        <img src="assets/svg/sobre.svg">  
+                      </span>
+                      <span class="has-text-weight-bold current-election-title" style="display: inline-block; width: 100%;">ELECCIÓN EN CURSO</span>
+                      </div>
+                     <figure class="image my-5 banner-image p-4 current-election-figure">
+                      <img src="assets/img/logo-senado.jpg">
+                    </figure>
+                    <h1 id="current-election-title-down" class="has-text-weight-bold pt-2 pb-4">ELECCIONES SENADO UNIVERSITARIO<br>
+                    ACADÉMICOS(AS) Y FUNCIONARIOS(AS)</h1>
+                    <p class="election-info mx-2" style="text-align: center;">
+                      ACADÉMICOS(AS) Y FUNCIONARIOS(AS) DEL HOSPITAL<br>
+                      <span class="has-text-weight-bold">miércoles 03 de agosto</span> a las <span class="has-text-weight-bold">08:00</span>, hasta el día <span class="has-text-weight-bold">jueves 04 de agosto</span> a las <span class="has-text-weight-bold">17:00</span>
+                    </p>
+                    <p class="election-info mx-2" style="text-align: center;">
+                      ACADÉMICOS(AS) Y FUNCIONARIOS(AS) DE TODA LA UNIVERSIDAD<br>
+                      <span class="has-text-weight-bold">jueves 04 de agosto</span>, desde las <span class="has-text-weight-bold">08:00</span> hasta las <span class="has-text-weight-bold">17:00</span>
+                    </p>
+                    <div class="columns mt-2 pt-2 px-2" style="border:2px solid #004b93; border-radius: 5px;">
+                      <div class="column is-6">
+                        <p style="text-align: left; color: #004b93; font-weight: bold; font-size: 1rem;">INGRESO ACADÉMICOS(AS)</p>
+                        <figure class="image my-3" style="border: 2px solid #004b93">
+                          <img src="assets/img/senado-acad.jpg">
+                        </figure>
+
+                          <button class="mt-2 button election-button election-button-acad is-outlined js-modal-trigger" data-target="modal-js-senado-transv">
+                            <span class="has-text-white">ELECCIÓN ACADÉMICOS(AS) TRANSVERSALES</span>
+                          </button>
+
+                          <button class="button election-button election-button-acad is-outlined js-modal-trigger" data-target="modal-js-senado-local">
+                            <span class="has-text-white">ELECCIÓN ACADÉMICOS(AS) LOCALES</span>
+                          </button>
+ 
+                      </div>
+                      <div class="column is-6">
+                        <p style="text-align: left; color: #0095d4; font-weight: bold; font-size: 1rem;">INGRESO FUNCIONARIOS(AS)</p>
+                        <figure class="image my-3" style="border: 2px solid #0095d4">
+                          <img src="assets/img/senado-func.jpg">
+                        </figure>
+
+                        <button class="mt-2 button election-button election-button-func is-outlined js-modal-trigger" data-target="modal-js-senado-func">
+                          <span class="has-text-white">ELECCIÓN FUNCIONARIOS(AS)</span>
+                        </button>
+
+                      </div>
+                    </div>
+                    <div class="election-info mx-2 pt-3">
+                      
+                      <!-- <h1 id="election-status-1" class="has-text-weight-bold pt-2">ELECCIÓN CERRADA</h1> -->
+                    </div> 
+                    <!-- <h1 id="current-election-title-down" class="has-text-weight-bold pt-2 pb-4">NINGUNA ELECCIÓN EN CURSO</h1> -->
+                    
+                  </div>
+                </div>
+              </div>
+<!--       <div class="column is-align-self-center is-hidden-touch">
+        <figure class="image">
+          <img id="drawing-election" src="assets/svg/dibujo_2.svg" />
+        </figure>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+
+</div>
+<section class="section video-section" id="video">
+  <div class="container">
+    <h1 class="title pt-2" id="election-current">
+      ¿CÓMO VOTAR UTILIZANDO PARTICIPA UCHILE?
+    </h1>
+    <h1 class="subtitle" id="election-current">
+      Revisa el vídeo a continuación para aprender a votar utilizando
+      Participa UChile
+    </h1>
+    <figure class="image is-16by9">
+      <iframe
+      class="has-ratio"
+      width="640"
+      height="360"
+      src="https://www.youtube.com//embed/-_nmdpj6IBU"
+      frameborder="0"
+      allowfullscreen
+      ></iframe>
+    </figure>
+    <button class="button election-button is-outlined mt-5 js-modal-trigger" data-target="modal-js-demo-election">
+      <span class="has-text-white">¡Prueba nuestro sistema!</span>
+    </button>
+  </div>
+</section>
+<div id="second-background">
+<section class="section faq-section" id="faq">
+  <div class="container">
+    <h1 class="title pt-2" id="election-current">PREGUNTAS FRECUENTES (FAQ)</h1>
+    <article class="message">
+      <div class="message-header">
+        <p>1. ¿Cómo se autentican los usuarios?</p>
+      </div>
+      <div class="message-body has-text-black">
+        Todos los votantes de Participa UChile deben contar con una cuenta UChile (cuenta Pasaporte o mi.uchile) puesto que es la única manera de autenticarse en el sistema.
+      </div>
+    </article>
+    <article class="message">
+      <div class="message-header">
+        <p>
+          2. ¿En qué elecciones se utiliza el sistema Participa UChile?
+        </p>
+      </div>
+      <div class="message-body has-text-black">
+        Participa UChile está orientado a elecciones de <span class="has-text-weight-bold">bajo perfil en un contexto universitario</span>, como por ejemplo, elecciones de directores de unidades académicas, consejeros, representantes de funcionarios y elecciones estudiantiles locales.
+
+        Cuando la elección es de alto perfil, como por ejemplo, elecciones de cargos públicos de nivel nacional (presidente y representantes, etc.), la votación electrónica remota es aún un desafío con muchas interrogantes y riesgos significativos. La <a href="https://www.nationalacademies.org/our-work/the-future-of-voting-accessible-reliable-verifiable-technology" target="_blank">recomendación de la comunidad experta internacional</a> para dicho contexto es no utilizar votación remota pues no se conoce un sistema hoy en día que garantice seguridad a un nivel adecuado. Participa UChile no es la excepción.
+      </div>
+    </article>
+    <article class="message">
+      <div class="message-header">
+        <p>3. ¿Qué seguridad provee Participa UChile?</p>
+      </div>
+      <div class="message-body has-text-black">
+        Participa UChile es una adaptación del sistema <a href="https://www.usenix.org/legacy/event/sec08/tech/full_papers/adida/adida.pdf" target="_blank">Helios Voting, propuesto por Ben Adida (2008)</a>. Helios ha sido utilizado por entidades como la International Association for Cryptographic Research, y la U. de Louvain-Le Neuve (Bélgica). 
+
+        Participa UChile, tal como Helios, utiliza <span class="has-text-weight-bold">algoritmos matemáticos para mejorar la seguridad del sistema</span>. El sistema permite, por ejemplo, garantizar el secreto del voto encriptando los votos con una clave secreta dividida entre varios custodios. De hecho, el sistema nunca revela (desencripta) algún voto individual sino sólo el resultado final, para lo cual se requiere la cooperación activa de los custodios. Adicionalmente, cualquier persona, sea un participante en la elección o un mero observador pasivo, puede auditar la elección, esto es, verificar matemáticamente que el resultado es consistente con los votos encriptados emitidos. 
+      </div>
+    </article>
+    <article class="message">
+      <div class="message-header">
+        <p>4. ¿En qué se diferencia Participa UChile de un sistema de votación cerrado?</p>
+      </div>
+      <div class="message-body has-text-black">
+        Los algoritmos criptográficos del sistema Participa UChile permiten evidenciar intentos externos o internos de manipulación de votos o del total. Otros sistemas cerrados son opacos y sólo entregan el resultado sin mayor explicación. En ellos, tanto el secreto de un voto individual como la integridad del resultado final depende exclusivamente del administrador del sistema informático. Los votantes y la comunidad deben depositar su confianza en el accionar correcto del administrador, sin posibilidad de confirmar si la confianza es merecida o no. Si bien Participa UChile no elimina completamente dicha confianza, la minimiza significativamente, dándole herramientas al votante para confirmar si es merecida o no.
+      </div>
+    </article>
+    <article class="message">
+      <div class="message-header">
+        <p>5. ¿Cómo puedo verificar que mi voto ha sido recibido por Participa UChile?</p>
+      </div>
+      <div class="message-body has-text-black">
+       Cada votante, al concluir la selección de sus preferencias y enviar la papeleta con su voto encriptado, recibe un código serial identificador de la papeleta. Este código no revela su voto ni permite revelarlo a un tercero, pero sí permite identificar la papeleta encriptada dentro de la lista de papeletas encriptadas recibidas por el servidor. 
+     </div>
+   </article>
+   <article class="message">
+    <div class="message-header">
+      <p>6. ¡El sistema permite votar más de una vez! ¿Es un error o falla?</p>
+    </div>
+    <div class="message-body has-text-black">
+     El sistema permite que, cualquier votante, luego de haber votado pueda ingresar nuevamente y reiniciar el proceso de votación, emitiendo un nuevo voto que reemplaza al voto anterior. El sistema nunca almacena más de un voto por votante. Si bien para un votante puede parecer que emite un "segundo voto", eso no es efectivo, pues efectivamente está reemplazando su voto. En particular, no puede darse el caso que un mismo votante tenga dos votos o más, siempre tendrá a lo más un voto. Esta funcionalidad es intencional y, si bien no existe en un sistema de votación de “lápiz y papel”, es posible de implementar de forma segura en un sistema electrónico. Es una medida estándar de mitigación parcial contra el problema de la coerción. Si bien no es perfecta, es simple de implementar y en entornos de baja coerción se considera razonablemente efectiva. Para la tranquilidad de todas y todos, podemos aclarar que no es una característica errónea o en necesidad de arreglo, pues no viola la unicidad del voto.
+   </div>
+ </article>
+ <article class="message">
+    <div class="message-header">
+      <p>7. ¿participa.uchile.cl ó participauchile.cl? ¿Cuál es la dirección web correcta?</p>
+    </div>
+    <div class="message-body has-text-black">
+     Ambas direcciones web son válidas para acceder a las votaciones y consultas realizadas por Participa UChile. 
+   </div>
+ </article>
+</div>
+</section>
+</div>
+<section class="section team-section" id="equipo">
+  <div class="container">
+    <h1 class="title pt-2" id="election-current">EQUIPO DE TRABAJO</h1>
+    <h1 class="subtitle pt-0" id="election-current">Mayo 2022</h1>
+    
+    <div class="columns">
+      
+      <div class="column">
+        <div class="box has-text-centered team-box">
+          <figure class="image">
+            <img class="is-rounded team-image" src="assets/svg/alejandro.svg"/>
+          </figure>
+          <p class="title is-size-6 pt-4 is-color-blue has-text-weight-bold">ALEJANDRO HEVIA</p>
+          <p class="subtitle is-size-6 is-color-blue">Coordinador Académico</p>
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="box has-text-centered team-box">
+          <figure class="image">
+            <img class="is-rounded team-image" src="assets/svg/camilo.svg"/>
+          </figure>
+          <p class="title is-size-6 pt-4 is-color-blue has-text-weight-bold">CAMILO GÓMEZ</p>
+          <p class="subtitle is-size-6 is-color-blue">Coordinador Operativo</p>
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="box has-text-centered team-box">
+          <figure class="image">
+            <img class="is-rounded team-image" src="assets/svg/catalina.svg"/>
+          </figure>
+          <p class="title is-size-6 pt-4 is-color-blue has-text-weight-bold">CATALINA BURGOS</p>
+          <p class="subtitle is-size-6 is-color-blue">Diseñadora Gráfica</p>
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="box has-text-centered team-box">
+          <figure class="image">
+            <img class="is-rounded team-image" src="assets/svg/eduardo.svg" />
+          </figure>
+          <p class="title is-size-6 pt-4 is-color-blue has-text-weight-bold">EDUARDO RIVEROS</p>
+          <p class="subtitle is-size-6 is-color-blue">Ingeniero de Ciberseguridad e Infraestructura</p>
+        </div>
+      </div>
+
+    </div>
+
+<div class="columns">
+
+  <div class="column is-one-quarter">
+    <div class="box has-text-centered team-box">
+      <figure class="image">
+        <img class="is-rounded team-image" src="assets/svg/cristobal.svg" />
+      </figure>
+      <p class=" title is-size-6 pt-4 is-color-blue has-text-weight-bold">CRISTOBAL JARAMILLO</p>
+      <p class="subtitle is-size-6 is-color-blue">Ingeniero de Desarrollo</p>
+    </div>
+  </div>
+
+  <div class="column is-one-quarter">
+    <div class="box has-text-centered team-box">
+      <figure class="image">
+        <img class="is-rounded team-image" src="assets/svg/marta.svg" />
+      </figure>
+      <p class=" title is-size-6 pt-4 is-color-blue has-text-weight-bold">MARTA APABLAZA</p>
+      <p class="subtitle is-size-6 is-color-blue">Periodista</p>
+    </div>
+  </div>
+  
+  <div class="column is-one-quarter">
+    <div class="box has-text-centered team-box">
+      <figure class="image">
+        <img class="is-rounded team-image" src="assets/svg/fernanda.svg" />
+      </figure>
+      <p class="title is-size-6 pt-4 is-color-blue has-text-weight-bold">FERNANDA MACÍAS</p>
+      <p class="subtitle is-size-6 is-color-blue">Estudiante de Pregrado</p>
+    </div>
+  </div>
+
+  <div class="column is-one-quarter">
+    <div class="box has-text-centered team-box">
+      <figure class="image">
+        <img class="is-rounded team-image" src="assets/svg/raul.svg" />
+      </figure>
+      <p class="title is-size-6 pt-4 is-color-blue has-text-weight-bold">RAÚL DE LA FUENTE</p>
+      <p class="subtitle is-size-6 is-color-blue">Estudiante de Pregrado</p>
+    </div>
+  </div>
+
+</div>
+
+</section>
+
+<div class="is-flex is-justify-content-center pt-4 pb-5" style="font-size: 2rem; background-color: white;">
+  <span class="bullet-1">•</span> &emsp; <span class="bullet-2">•</span> &emsp; <span class="bullet-3">•</span> &emsp; <span class="bullet-4">•</span>
+</div>
+</div>
+
+<footer class="footer">
+  <div class="container has-text-centered">
+    <p>
+      PARTICIPA.UCHILE es un proyecto de la Universidad de Chile - 2022
+    </p>
+  </div>
+</footer>
+
+<section class="hero">
+  <div class="hero-body bottom-hero py-4"></div>
+</section>
+</div>
+</body>
+<script type="text/javascript">
+      //Get the button:
+      mybutton = document.getElementById("top-button");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      } 
+  </script>
+</html>

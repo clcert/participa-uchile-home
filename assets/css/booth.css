@@ -223,13 +223,16 @@ div#preload {
 .current-election-figure {
   margin-left: auto;
   margin-right: auto;
-  width: 75%;
+  max-width: 330px;
+  /* width: 75%; */
+  height: 100%;
 }
 
 #current-election-title-down {
+  margin-top: 1rem;
   font-size: 1.2rem;
-  text-align: center;
-  color: #004b93;
+  text-align: left;
+  color: black;
 }
 
 #top-button {
@@ -305,7 +308,7 @@ div#preload {
 }
 
 .banner-image {
-  border: 5px solid #6dcaf3;
+  /* border: 5px solid #6dcaf3; */
 }
 
 .title-section {
@@ -405,6 +408,16 @@ div#preload {
   }
 }
 
+.modal-senado {
+  width: 700px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-senado {
+    max-width: 95%;
+  }
+}
+
 .news-card {
   background-color: #004990 !important;
 }
@@ -461,16 +474,17 @@ div#preload {
 .election-button {
   display: flex !important;
   align-self: center;
-  color: ##e43427 !important;
+  color: #e43427 !important;
+  border-color: #e43427 !important;
+  background-color: #e43427 !important;
   font-family: "Arial", sans-serif !important;
   font-weight: bold;
-  border-color: #e43427 !important;
   white-space: normal !important;
   height: auto !important;
-  background-color: #e43427 !important;
   margin-bottom: 1rem;
   margin-left: auto;
   margin-right: auto; 
+  font-size: 0.95rem !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -478,6 +492,49 @@ div#preload {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.election-button-acad {
+  color: #0096d5 !important;
+  border-color: #0096d5 !important;
+  background-color: #0096d5 !important;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 10px !important;
+}
+
+.election-button-acad:hover {
+  background-color: #e43427 !important;
+  border-color: #e43427 !important;
+}
+
+.election-button-func {
+  color: #01b7ff !important;
+  border-color: #01b7ff !important;
+  background-color: #01b7ff !important;
+  width: 100%;
+  border-radius: 10px !important;
+}
+
+.election-button-func:hover {
+  background-color: #e43427 !important;
+  border-color: #e43427 !important;
+}
+
+.func-section {
+    border-left: 1px solid #93d5f7;
+    padding-left: 1.2rem !important;
+  }
+
+@media screen and (max-width: 768px) {
+  .func-section {
+    border-top: 1px solid #93d5f7;
+    border-left: 0;
+  }
+}
+
+.img-disabled {
+  filter: blur(1px) brightness(0.6);
 }
 
 .past-section {
