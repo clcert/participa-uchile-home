@@ -223,17 +223,18 @@ div#preload {
 .current-election-figure {
   margin-left: auto;
   margin-right: auto;
-  max-width: 330px;
-  /* min-width: 250px;
-  width: 75%; */
+  /* max-width: 330px; */
+  width: 60%;
+  min-width: 250px; */
   height: 100%;
 }
 
 #current-election-title-down {
   margin-top: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-align: left;
-  color: black;
+  color: #004b93;
+  text-align: center;
 }
 
 #top-button {
@@ -309,7 +310,7 @@ div#preload {
 }
 
 .banner-image {
-  /* border: 5px solid #6dcaf3; */
+  border: 5px solid #6dcaf3;
 }
 
 .title-section {
